@@ -8,17 +8,15 @@ import { FirestoreService } from '../../services/firestore.service';
 })
 export class CarouselComponent implements OnInit {
 
-carousel;
-
+  carousel = [];
 
   constructor(
     private service: FirestoreService
   ) { }
 
   ngOnInit() {
-    this.service.getCarousel("fw8fzQ5ieHez41DxYPdT")
+    this.service.getAllCarousels()
     .subscribe((response) => this.carousel = response);
-    console.log(this.carousel)
   }
 
 }
