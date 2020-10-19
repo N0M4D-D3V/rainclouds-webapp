@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from './product';
+import { FirestoreService } from '../../services/firestore.service';
 
 @Component({
   selector: 'app-catalog',
@@ -8,15 +8,15 @@ import { Product } from './product';
 })
 export class CatalogComponent implements OnInit {
 
-  products: Product[] = [
-    new Product(),
-    new Product(),
-    new Product()
-  ];
+  products = [];
 
-  constructor() { }
+  constructor(
+    private firestoreService: FirestoreService
+  ) { }
 
   ngOnInit() {
+    this.firestoreService.getAllProducts()
+    .subscribe((response) => this.products = response);
   }
 
 }

@@ -7,7 +7,14 @@ import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
 import { CarouselComponent } from './content/carousel/carousel.component';
 import { CatalogComponent } from './content/catalog/catalog.component';
-import { HeadImageComponent } from './content/head-image/head-image.component';
+import { GaleryComponent } from './content/galery/galery.component';
+
+// Firebase
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -17,10 +24,14 @@ import { HeadImageComponent } from './content/head-image/head-image.component';
     ContentComponent,
     CarouselComponent,
     CatalogComponent,
-    HeadImageComponent
+    GaleryComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule, // Only required for database features
+    AngularFireAuthModule, // Only required for auth features,
+    AngularFireStorageModule // Only required for storage features
   ],
   providers: [],
   bootstrap: [AppComponent]
