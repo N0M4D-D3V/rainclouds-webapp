@@ -3,28 +3,26 @@
     <div class="col-md-4" *ngFor="let product of products">
       <div class="card mb-4 card-hover-efect">
         <div class="card bg-dark border-dark text-white">
-          <img src="{{product.payload.doc.data().imgLink}}" alt="image" width="100%" height="225"
-          focusable="false">
-        <div class="card-img-overlay">
-          <h5 class="card-title">{{product.payload.doc.data().name}}</h5>
-        </div>
-        </div>
-            <div class="card-body">
-              <p class="card-text">{{product.payload.doc.data().description}}</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a href="#">
-                    <button type="button" class="btn btn-sm btn-outline-danger" >Play</button>
-                  </a>
-                  <a href="#">
-                    <button type="button" class="btn btn-sm btn-outline-success">Buy</button>
-                  </a>
-                </div>
-                <small class="text-muted">{{product.payload.doc.data().date}}</small>
-              </div>
-            </div>
+          <img src="{{product.payload.doc.data().imgLink}}" alt="image" width="100%" height="auto" focusable="false">
+          <div class="card-img-overlay">
+            <h5 class="card-title">{{product.payload.doc.data().name}}</h5>
           </div>
+        </div>
+        <div class="card-body">
+          <p class="card-text">{{product.payload.doc.data().description}}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <a href="#">
+                <button type="button" class="btn btn-sm btn-outline-danger">Play</button>
+              </a>
+              <a href="#">
+                <button type="button" class="btn btn-sm btn-outline-success">Buy</button>
+              </a>
+            </div>
+            <small class="text-muted">{{product.payload.doc.data().date}}</small>
+          </div>
+        </div>
+      </div>
     </div>
-
   </div>
 </div>

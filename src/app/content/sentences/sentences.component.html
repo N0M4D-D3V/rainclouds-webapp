@@ -1,0 +1,17 @@
+<div>
+
+    <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0"></h1>
+    <hr class="mt-2 mb-5">
+
+    <mat-carousel timings="250ms ease-in" [autoplay]="true" interval="3000" color="accent" maxWidth="225"
+        proportion="35" [loop]="true" [hideArrows]="true" [hideIndicators]="true" [useKeyboard]="true"
+        [useMouseWheel]="false" orientation="ltr">
+        <mat-carousel-slide *ngFor="let sentence of sentences; let i = index" [hideOverlay]="true">
+
+            <h1 class="text-center customH1">
+                "{{sentence.payload.doc.data().sentence}}" <br><br> - {{sentence.payload.doc.data().author}} -
+            </h1>
+
+        </mat-carousel-slide>
+    </mat-carousel>
+</div>

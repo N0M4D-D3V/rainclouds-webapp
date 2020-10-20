@@ -1,36 +1,46 @@
-import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { Injectable } from "@angular/core";
+import { AngularFirestore } from "@angular/fire/firestore";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class FirestoreService {
-  constructor(
-    private firestore: AngularFirestore
-  ) {}
+  constructor(private firestore: AngularFirestore) {}
 
-  public getProduct(documentId: string) {
-    return this.firestore.collection('products').doc(documentId).snapshotChanges();
+  getProduct(documentId: string) {
+    return this.firestore
+      .collection("products")
+      .doc(documentId)
+      .snapshotChanges();
   }
 
-  public getAllProducts() {
-    return this.firestore.collection('products').snapshotChanges();
+  getAllProducts() {
+    return this.firestore.collection("products").snapshotChanges();
   }
 
-  public getImage(documentId: string) {
-    return this.firestore.collection('images').doc(documentId).snapshotChanges();
+  getImage(documentId: string) {
+    return this.firestore
+      .collection("images")
+      .doc(documentId)
+      .snapshotChanges();
   }
 
-  public getAllImages() {
-    return this.firestore.collection('images').snapshotChanges();
+  getAllImages() {
+    return this.firestore.collection("images").snapshotChanges();
   }
 
-  public getCarousel(documentId: string) {
-    return this.firestore.collection('carousel').doc(documentId).snapshotChanges();
+  getAllSentences() {
+    return this.firestore.collection("sentences").snapshotChanges();
   }
 
-  public getAllCarousels() {
-    return this.firestore.collection('carousel').snapshotChanges();
+  getCarousel(documentId: string) {
+    return this.firestore
+      .collection("carousel")
+      .doc(documentId)
+      .snapshotChanges();
   }
 
+  getAllCarousels() {
+    return this.firestore.collection("carousel").snapshotChanges();
+  }
 }
