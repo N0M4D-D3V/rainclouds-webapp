@@ -8,6 +8,9 @@ import { ContentComponent } from "./content/content.component";
 import { CarouselComponent } from "./content/carousel/carousel.component";
 import { CatalogComponent } from "./content/catalog/catalog.component";
 import { GaleryComponent } from "./content/galery/galery.component";
+import { MusicModalComponent } from "./modals/music-modal/music-modal.component";
+import { ArtModalComponent } from "./modals/art-modal/art-modal.component";
+import { ContactModalComponent } from "./modals/contact-modal/contact-modal.component";
 
 // Firebase
 import { AngularFireModule } from "@angular/fire";
@@ -20,6 +23,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 // Material
 import { MatCarouselModule } from "@ngmodule/material-carousel";
+import { MatDialogModule } from "@angular/material";
 
 @NgModule({
   declarations: [
@@ -31,6 +35,9 @@ import { MatCarouselModule } from "@ngmodule/material-carousel";
     CatalogComponent,
     GaleryComponent,
     SentencesComponent,
+    MusicModalComponent,
+    ArtModalComponent,
+    ContactModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,8 +47,14 @@ import { MatCarouselModule } from "@ngmodule/material-carousel";
     AngularFireStorageModule,
     BrowserAnimationsModule, // Only required for storage features
     MatCarouselModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
+  entryComponents: [
+    MusicModalComponent,
+    ArtModalComponent,
+    ContactModalComponent,
+  ],
 })
 export class AppModule {}

@@ -1,0 +1,51 @@
+.hover-animation {
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+}
+
+.hover-animation:hover {
+  transform: scale(1.2);
+}
+
+h1 {
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: x-large;
+  text-align: center;
+  text-shadow: 0 10px 20px rgba(255, 7, 58, 0.15),
+    0 4px 8px rgba(128, 29, 25, 0.36);
+}
+
+h6 {
+  text-align: center;
+  text-shadow: 0 5px 15px rgba(255, 7, 58, 0.15),
+    0 2px 4px rgba(128, 29, 25, 0.36);
+}
+
+p {
+  text-align: center;
+  font-style: italic;
+}
+
+.card {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 7, 58, 0.15),
+    0 4px 8px rgba(128, 29, 25, 0.36);
+}
+
+@media screen and (max-width: 600px) {
+  h1,
+  h6 {
+    display: none;
+  }
+
+  .card {
+    width: 250px;
+  }
+}
