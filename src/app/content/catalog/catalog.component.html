@@ -1,4 +1,5 @@
-<div class="container">
+<!-- WEB -->
+<div class="container web-catalog">
   <div class="row mt-3">
     <div class="col-md-4" *ngFor="let product of products">
       <div class="card mb-4 card-hover-efect">
@@ -13,13 +14,42 @@
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
               <a href="{{product.payload.doc.data().playLink}}">
-                <button type="button" class="btn btn-sm btn-outline-danger">Play</button>
+                <button type="button" class="btn btn-sm btn-outline-danger mr-1">Play</button>
               </a>
               <a href="{{product.payload.doc.data().buyLink}}">
-                <button type="button" class="btn btn-sm btn-outline-success">Buy</button>
+                <button type="button" class="btn btn-sm btn-outline-success mr-1">Buy</button>
               </a>
             </div>
             <small class="text-muted">{{product.payload.doc.data().date}}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PHONE -->
+<div class="container phone-catalog">
+  <div class="row mt-2">
+    <div class="col-md-1" *ngFor="let product of products" style="width: 50%;">
+      <div class="card m-1">
+        <div class="card bg-dark border-dark text-white">
+          <img style="filter: blur(1px);" src="{{product.payload.doc.data().imgLink}}" alt="image" width="100%"
+            height="auto" focusable="false">
+          <div class="card-img-overlay">
+            <h5 class="card-title">{{product.payload.doc.data().description}}</h5>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <a href="{{product.payload.doc.data().playLink}}">
+                <button type="button" class="btn btn-sm btn-outline-danger mr-3">Play</button>
+              </a>
+              <a href="{{product.payload.doc.data().buyLink}}">
+                <button type="button" class="btn btn-sm btn-outline-success mr-3">Buy</button>
+              </a>
+            </div>
           </div>
         </div>
       </div>

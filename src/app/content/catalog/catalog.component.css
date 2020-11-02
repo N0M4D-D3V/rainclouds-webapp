@@ -15,3 +15,26 @@ a.button {
   text-decoration: none;
   color: white;
 }
+
+.phone-catalog {
+  display: none;
+}
+
+.web-catalog {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .phone-catalog {
+    display: block;
+  }
+
+  .web-catalog {
+    display: none;
+  }
+
+  h5 {
+    text-align: center;
+    text-shadow: 2px 2px black;
+  }
+}

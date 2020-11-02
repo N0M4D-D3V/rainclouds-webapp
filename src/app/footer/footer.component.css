@@ -12,3 +12,21 @@ h6,
 a {
   color: black;
 }
+
+hr {
+  border: 1px solid whitesmoke;
+}
+
+footer {
+  border-top: 4px solid black;
+}
+
+@media screen and (max-width: 600px) {
+  .web-list {
+    display: none;
+  }
+
+  img {
+    width: 100px;
+  }
+}

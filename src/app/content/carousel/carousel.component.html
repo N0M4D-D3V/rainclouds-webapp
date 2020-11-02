@@ -1,6 +1,7 @@
-<mat-carousel timings="250ms ease-in" [autoplay]="true" interval="5000" color="accent" maxWidth="225" proportion="45"
-  [loop]="true" [hideArrows]="false" [hideIndicators]="true" [useKeyboard]="true" [useMouseWheel]="false"
-  orientation="ltr">
+<!-- WEB CAROUSEL -->
+<mat-carousel class="web-carousel" timings="250ms ease-in" [autoplay]="true" interval="5000" color="accent"
+  maxWidth="225" proportion="45" [loop]="true" [hideArrows]="false" [hideIndicators]="true" [useKeyboard]="true"
+  [useMouseWheel]="false" orientation="ltr">
   <mat-carousel-slide *ngFor="let item of carousel; let i = index" [hideOverlay]="true">
 
     <div>
@@ -11,6 +12,30 @@
       <div class="carousel-caption card border-secondary">
         <h3 class="h3-responsive">{{item.payload.doc.data().headline}}</h3>
         <p>{{item.payload.doc.data().paragraph}}</p>
+        <button class="btn btn-danger">
+          <a href="{{item.payload.doc.data().buttonLink}}" class="button">
+            {{item.payload.doc.data().buttonText}}
+          </a>
+        </button>
+      </div>
+    </div>
+
+  </mat-carousel-slide>
+</mat-carousel>
+
+<!-- PHONE CAROUSEL -->
+<mat-carousel class="phone-carousel" timings="250ms ease-in" [autoplay]="true" interval="5000" color="accent"
+  maxWidth="225" proportion="45" [loop]="true" [hideArrows]="true" [hideIndicators]="true" [useKeyboard]="true"
+  [useMouseWheel]="false" orientation="ltr">
+  <mat-carousel-slide *ngFor="let item of carousel; let i = index" [hideOverlay]="true">
+
+    <div>
+      <div class="view w-100">
+        <img class="d-block w-100" src="{{item.payload.doc.data().imageURL}}" alt="Image">
+        <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+      </div>
+      <div class="carousel-caption card border-secondary">
+        <h3 class="h3-responsive">{{item.payload.doc.data().headline}}</h3>
         <button class="btn btn-danger">
           <a href="{{item.payload.doc.data().buttonLink}}" class="button">
             {{item.payload.doc.data().buttonText}}

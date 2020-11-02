@@ -13,17 +13,25 @@ a.button {
   color: white;
 }
 
+.web-carousel {
+  display: block;
+}
+
+.phone-carousel {
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
-  p {
-    visibility: hidden;
+  .web-carousel {
+    display: none;
   }
 
-  h3 {
-    font-size: 100%;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .phone-carousel {
+    display: block;
+  }
+
+  .btn {
+    width: 80%;
+    margin-left: 10%;
   }
 }
