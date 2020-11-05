@@ -1,4 +1,7 @@
 export class GlobalConstants {
+  //APP
+  public static APP_VERSION: string = "1.0.0";
+
   //RAZAK links
   public static YOUTUBE_URL: string = "#";
   public static BANDCAMP_URL: string = "#";
@@ -13,6 +16,8 @@ export class GlobalConstants {
     "https://instagram.com/_gomez.alcantara_?igshid=1ogtexcnyicb6";
 
   //Bullet Kid Links
+  public static BULLET_KID_INSTAGRAM: string =
+    "https://instagram.com/jose_pulekid?igshid=uyw2xek0id7k";
 
   //Steel Witch Links
   public static STEEL_WITCH_INSTAGRAM: string =

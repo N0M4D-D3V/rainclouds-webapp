@@ -7,6 +7,9 @@ import { GlobalConstants } from "../common/global-constants";
   styleUrls: ["./footer.component.css"],
 })
 export class FooterComponent implements OnInit {
+  //APP
+  appVersion: string = GlobalConstants.APP_VERSION;
+
   //RAZAK
   youtube: string = GlobalConstants.YOUTUBE_URL;
   bandcamp: string = GlobalConstants.BANDCAMP_URL;
@@ -20,6 +23,9 @@ export class FooterComponent implements OnInit {
 
   //steel witch
   steelWitchInstagram: string = GlobalConstants.STEEL_WITCH_INSTAGRAM;
+
+  //bullet kid
+  bulletKidInstagram: string = GlobalConstants.BULLET_KID_INSTAGRAM;
 
   //dark void studios
   darkVoidStudiosWeb: string = GlobalConstants.DARK_VOID_STUDIOS_WEB;

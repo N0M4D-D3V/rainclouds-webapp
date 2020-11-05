@@ -15,6 +15,9 @@ export class ArtModalComponent implements OnInit {
   //steel witch
   steelWitchInstagram: string = GlobalConstants.STEEL_WITCH_INSTAGRAM;
 
+  //bullet kid
+  bulletKidInstagram: string = GlobalConstants.BULLET_KID_INSTAGRAM;
+
   constructor() {}
 
   ngOnInit() {}
