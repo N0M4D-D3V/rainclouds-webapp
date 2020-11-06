@@ -10,7 +10,7 @@
           </div>
         </div>
         <div class="card-body">
-          <p class="card-text">{{product.payload.doc.data().description}}</p>
+          <p class="card-text text-center">{{product.payload.doc.data().description}}</p>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
               <a href="{{product.payload.doc.data().playLink}}">
@@ -32,25 +32,15 @@
 <div class="container phone-catalog">
   <div class="row mt-2">
     <div class="col-md-1" *ngFor="let product of products" style="width: 50%;">
-      <div class="card m-1">
+      <div class="card m-1" (click)="openPlayOrBuyDialog(product)">
         <div class="card bg-dark border-dark text-white">
-          <img style="filter: blur(1px);" src="{{product.payload.doc.data().imgLink}}" alt="image" width="100%"
-            height="auto" focusable="false">
+          <img src="{{product.payload.doc.data().imgLink}}" alt="image" width="100%" height="auto" focusable="false">
           <div class="card-img-overlay">
-            <h5 class="card-title">{{product.payload.doc.data().description}}</h5>
+            <h5 class="card-title">{{product.payload.doc.data().name}}</h5>
           </div>
         </div>
         <div class="card-body">
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <a href="{{product.payload.doc.data().playLink}}">
-                <button type="button" class="btn btn-sm btn-outline-danger mr-3">Play</button>
-              </a>
-              <a href="{{product.payload.doc.data().buyLink}}">
-                <button type="button" class="btn btn-sm btn-outline-success mr-3">Buy</button>
-              </a>
-            </div>
-          </div>
+          <p class="card-text text-center">{{product.payload.doc.data().description}}</p>
         </div>
       </div>
     </div>

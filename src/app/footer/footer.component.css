@@ -1,12 +1,3 @@
-.hover-animation {
-  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s,
-    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
-}
-
-.hover-animation:hover {
-  transform: scale(1.5);
-}
-
 h5,
 h6,
 a {
@@ -19,6 +10,17 @@ hr {
 
 footer {
   border-top: 4px solid black;
+}
+
+@media screen and (min-width: 600px) {
+  .hover-animation {
+    transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s,
+      0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  }
+
+  .hover-animation:hover {
+    transform: scale(1.5);
+  }
 }
 
 @media screen and (max-width: 600px) {

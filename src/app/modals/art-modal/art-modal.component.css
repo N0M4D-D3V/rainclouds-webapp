@@ -1,12 +1,3 @@
-.hover-animation {
-  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s,
-    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
-}
-
-.hover-animation:hover {
-  transform: scale(1.2);
-}
-
 h1 {
   font-family: Impact, Charcoal, sans-serif;
   font-size: x-large;
@@ -33,12 +24,22 @@ p {
     0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
 }
 
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(255, 7, 58, 0.15),
-    0 4px 8px rgba(128, 29, 25, 0.36);
-}
+@media screen and (min-width: 600px) {
+  .hover-animation {
+    transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s,
+      0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  }
 
+  .hover-animation:hover {
+    transform: scale(1.2);
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 7, 58, 0.15),
+      0 4px 8px rgba(128, 29, 25, 0.36);
+  }
+}
 @media screen and (max-width: 600px) {
   h1,
   h6 {

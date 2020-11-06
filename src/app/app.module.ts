@@ -24,6 +24,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 // Material
 import { MatCarouselModule } from "@ngmodule/material-carousel";
 import { MatDialogModule } from "@angular/material";
+import { PlayOrBuyComponent } from "./modals/play-or-buy/play-or-buy.component";
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { MatDialogModule } from "@angular/material";
     MusicModalComponent,
     ArtModalComponent,
     ContactModalComponent,
+    PlayOrBuyComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +57,7 @@ import { MatDialogModule } from "@angular/material";
     MusicModalComponent,
     ArtModalComponent,
     ContactModalComponent,
+    PlayOrBuyComponent,
   ],
 })
 export class AppModule {}
