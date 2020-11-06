@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { GlobalConstants } from "../common/global-constants";
+import { version } from "../../../package.json";
 
 @Component({
   selector: "app-footer",
@@ -8,7 +9,7 @@ import { GlobalConstants } from "../common/global-constants";
 })
 export class FooterComponent implements OnInit {
   //APP
-  appVersion: string = GlobalConstants.APP_VERSION;
+  appVersion: string = version;
 
   //RAZAK
   youtube: string = GlobalConstants.YOUTUBE_URL;

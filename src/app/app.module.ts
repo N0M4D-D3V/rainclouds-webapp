@@ -25,6 +25,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatCarouselModule } from "@ngmodule/material-carousel";
 import { MatDialogModule } from "@angular/material";
 import { PlayOrBuyComponent } from "./modals/play-or-buy/play-or-buy.component";
+import { ProductionComponent } from "./modals/production/production.component";
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { PlayOrBuyComponent } from "./modals/play-or-buy/play-or-buy.component";
     ArtModalComponent,
     ContactModalComponent,
     PlayOrBuyComponent,
+    ProductionComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +60,7 @@ import { PlayOrBuyComponent } from "./modals/play-or-buy/play-or-buy.component";
     ArtModalComponent,
     ContactModalComponent,
     PlayOrBuyComponent,
+    ProductionComponent,
   ],
 })
 export class AppModule {}

@@ -1,7 +1,4 @@
 export class GlobalConstants {
-  //APP
-  public static APP_VERSION: string = "1.0.0";
-
   //RAZAK links
   public static YOUTUBE_URL: string = "#";
   public static BANDCAMP_URL: string = "#";

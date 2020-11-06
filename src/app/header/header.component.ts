@@ -3,6 +3,7 @@ import { MatDialog, MatDialogConfig } from "@angular/material";
 import { ArtModalComponent } from "../modals/art-modal/art-modal.component";
 import { ContactModalComponent } from "../modals/contact-modal/contact-modal.component";
 import { MusicModalComponent } from "../modals/music-modal/music-modal.component";
+import { ProductionComponent } from "../modals/production/production.component";
 
 @Component({
   selector: "app-header",
@@ -24,6 +25,12 @@ export class HeaderComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.autoFocus = false;
     this.dialog.open(ArtModalComponent, dialogConfig);
+  }
+
+  openProductionDialog(): void {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.autoFocus = false;
+    this.dialog.open(ProductionComponent, dialogConfig);
   }
 
   openContactDialog(): void {
