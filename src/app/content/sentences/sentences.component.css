@@ -1,16 +1,34 @@
 .customH1 {
+  font-size: 3em;
   color: black;
   text-shadow: 0 10px 20px rgba(255, 7, 58, 0.15),
     0 4px 8px rgba(128, 29, 25, 0.36);
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+}
+
+.customP {
+  font-size: 3em;
+  font-style: italic;
+}
+
+.phone-display {
+  display: none;
+}
+.pc-display {
+  display: block;
 }
 
 @media screen and (max-width: 600px) {
+  .phone-display {
+    display: block;
+  }
+  .pc-display {
+    display: none;
+  }
   .customH1 {
     font-size: 90%;
+  }
+
+  .customP {
+    font-size: 100%;
   }
 }
