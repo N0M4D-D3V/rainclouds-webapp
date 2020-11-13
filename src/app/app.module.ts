@@ -11,6 +11,8 @@ import { GaleryComponent } from "./content/galery/galery.component";
 import { MusicModalComponent } from "./modals/music-modal/music-modal.component";
 import { ArtModalComponent } from "./modals/art-modal/art-modal.component";
 import { ContactModalComponent } from "./modals/contact-modal/contact-modal.component";
+import { PlayOrBuyComponent } from "./modals/play-or-buy/play-or-buy.component";
+import { ProductionComponent } from "./modals/production/production.component";
 
 // Firebase
 import { AngularFireModule } from "@angular/fire";
@@ -24,8 +26,9 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 // Material
 import { MatCarouselModule } from "@ngmodule/material-carousel";
 import { MatDialogModule } from "@angular/material";
-import { PlayOrBuyComponent } from "./modals/play-or-buy/play-or-buy.component";
-import { ProductionComponent } from "./modals/production/production.component";
+import { MatTableModule } from "@angular/material/table";
+import { MatIconModule } from "@angular/material/icon";
+import { MatButtonModule } from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -52,6 +55,9 @@ import { ProductionComponent } from "./modals/production/production.component";
     BrowserAnimationsModule, // Only required for storage features
     MatCarouselModule,
     MatDialogModule,
+    MatTableModule,
+    MatIconModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

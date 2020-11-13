@@ -12,7 +12,6 @@ export class PlayOrBuyComponent implements OnInit {
   themeTitle: string;
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
-    console.log(data);
     this.themeTitle = data.pageValue.payload.doc.data().description;
     this.spotifyLink = data.pageValue.payload.doc.data().playLink;
     this.bandcampLink = data.pageValue.payload.doc.data().buyLink;

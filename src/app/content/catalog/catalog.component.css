@@ -11,6 +11,35 @@ a.button {
   display: block;
 }
 
+table {
+  width: 99%;
+  border-collapse: separate !important;
+  border-spacing: 0px 5px !important;
+}
+
+.mat-cell {
+  padding: 5px;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.mat-cell:first-child {
+  /* row border */
+  border-left: 1px solid black;
+  border-radius: 15px 0px 0px 15px;
+}
+
+td.mat-cell:last-child {
+  /* row border */
+  border-right: 1px solid black;
+  border-radius: 0px 15px 15px 0px;
+}
+
+span {
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 0.8rem;
+}
+
 @media screen and (min-width: 600px) {
   .card-hover-efect {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);

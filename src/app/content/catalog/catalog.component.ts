@@ -10,6 +10,7 @@ import { PlayOrBuyComponent } from "src/app/modals/play-or-buy/play-or-buy.compo
 })
 export class CatalogComponent implements OnInit {
   products = [];
+  displayedColumns: string[] = ["imgLink", "description", "options"];
 
   constructor(
     private firestoreService: FirestoreService,
@@ -17,9 +18,11 @@ export class CatalogComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.firestoreService
-      .getAllProducts()
-      .subscribe((response) => (this.products = response));
+    this.firestoreService.getAllProducts().subscribe((response: any) => {
+      this.products = response.sort((a, b) =>
+        a.payload.doc.data().order < b.payload.doc.data().order ? -1 : 1
+      );
+    });
   }
 
   openPlayOrBuyDialog(product): void {
