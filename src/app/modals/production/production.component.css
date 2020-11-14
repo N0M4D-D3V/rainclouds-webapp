@@ -56,4 +56,8 @@ p {
   li {
     margin-top: 10px;
   }
+
+  mat-dialog-content {
+    padding: 5px;
+  }
 }

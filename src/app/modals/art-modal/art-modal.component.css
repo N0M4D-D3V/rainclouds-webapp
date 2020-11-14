@@ -46,6 +46,10 @@ p {
     display: none;
   }
 
+  mat-dialog-content {
+    padding: 5px;
+  }
+
   .card {
     width: 250px;
   }
