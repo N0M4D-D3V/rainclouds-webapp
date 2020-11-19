@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { GlobalConstants } from "../../common/global-constants";
+import { GlobalConstants } from "../../../common/global-constants";
 
 @Component({
   selector: "app-music-modal",

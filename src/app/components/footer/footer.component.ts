@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { GlobalConstants } from "../common/global-constants";
-import { version } from "../../../package.json";
+import { GlobalConstants } from "../../common/global-constants";
+import { version } from "../../../../package.json";
 
 @Component({
   selector: "app-footer",

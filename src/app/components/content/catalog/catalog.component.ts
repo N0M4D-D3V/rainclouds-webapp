@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { MatDialog } from "@angular/material";
-import { PlayOrBuyComponent } from "src/app/modals/play-or-buy/play-or-buy.component";
 import { Product } from "src/app/models/product";
 import { ProductService } from "src/app/services/product.service";
+import { PlayOrBuyComponent } from "../../modals/play-or-buy/play-or-buy.component";
 
 @Component({
   selector: "app-catalog",

@@ -4,7 +4,7 @@ import { ArtModalComponent } from "../modals/art-modal/art-modal.component";
 import { ContactModalComponent } from "../modals/contact-modal/contact-modal.component";
 import { MusicModalComponent } from "../modals/music-modal/music-modal.component";
 import { ProductionComponent } from "../modals/production/production.component";
-import { GlobalConstants } from "../common/global-constants";
+import { GlobalConstants } from "../../common/global-constants";
 
 @Component({
   selector: "app-header",

@@ -2,17 +2,18 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
 import { AppComponent } from "./app.component";
-import { HeaderComponent } from "./header/header.component";
-import { FooterComponent } from "./footer/footer.component";
-import { ContentComponent } from "./content/content.component";
-import { CarouselComponent } from "./content/carousel/carousel.component";
-import { CatalogComponent } from "./content/catalog/catalog.component";
-import { GaleryComponent } from "./content/galery/galery.component";
-import { MusicModalComponent } from "./modals/music-modal/music-modal.component";
-import { ArtModalComponent } from "./modals/art-modal/art-modal.component";
-import { ContactModalComponent } from "./modals/contact-modal/contact-modal.component";
-import { PlayOrBuyComponent } from "./modals/play-or-buy/play-or-buy.component";
-import { ProductionComponent } from "./modals/production/production.component";
+import { HeaderComponent } from "./components/header/header.component";
+import { FooterComponent } from "./components/footer/footer.component";
+import { ContentComponent } from "./components/content/content.component";
+import { CarouselComponent } from "./components/content/carousel/carousel.component";
+import { CatalogComponent } from "./components/content/catalog/catalog.component";
+import { GaleryComponent } from "./components/content/galery/galery.component";
+import { MusicModalComponent } from "./components/modals/music-modal/music-modal.component";
+import { ArtModalComponent } from "./components/modals/art-modal/art-modal.component";
+import { ContactModalComponent } from "./components/modals/contact-modal/contact-modal.component";
+import { PlayOrBuyComponent } from "./components/modals/play-or-buy/play-or-buy.component";
+import { ProductionComponent } from "./components/modals/production/production.component";
+import { SentencesComponent } from "./components/content/sentences/sentences.component";
 
 // Firebase
 import { AngularFireModule } from "@angular/fire";
@@ -20,7 +21,6 @@ import { environment } from "../environments/environment";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { AngularFireStorageModule } from "@angular/fire/storage";
 import { AngularFireAuthModule } from "@angular/fire/auth";
-import { SentencesComponent } from "./content/sentences/sentences.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 // Material
