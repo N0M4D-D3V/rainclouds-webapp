@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Carousel } from "src/app/models/carousel";
-import { FirestoreService } from "../../services/firestore.service";
+import { CarouselService } from "src/app/services/carousel.service";
 
 @Component({
   selector: "app-carousel",
@@ -10,7 +10,7 @@ import { FirestoreService } from "../../services/firestore.service";
 export class CarouselComponent implements OnInit {
   carousel = new Array<Carousel>();
 
-  constructor(private service: FirestoreService) {}
+  constructor(private service: CarouselService) {}
 
   ngOnInit() {
     this.service

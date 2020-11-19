@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { FirestoreService } from "../../services/firestore.service";
 import { MatDialog } from "@angular/material";
 import { PlayOrBuyComponent } from "src/app/modals/play-or-buy/play-or-buy.component";
 import { Product } from "src/app/models/product";
+import { ProductService } from "src/app/services/product.service";
 
 @Component({
   selector: "app-catalog",
@@ -13,13 +13,10 @@ export class CatalogComponent implements OnInit {
   products = new Array<Product>();
   displayedColumns: string[] = ["imgLink", "description", "options"];
 
-  constructor(
-    private firestoreService: FirestoreService,
-    private dialog: MatDialog
-  ) {}
+  constructor(private service: ProductService, private dialog: MatDialog) {}
 
   ngOnInit() {
-    this.firestoreService.getAllProducts().subscribe((response) => {
+    this.service.getAllProducts().subscribe((response) => {
       this.products = response.sort((a, b) => (a.order < b.order ? -1 : 1));
     });
   }

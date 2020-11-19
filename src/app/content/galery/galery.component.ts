@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Image } from "src/app/models/image";
-import { FirestoreService } from "../../services/firestore.service";
+import { ImageService } from "src/app/services/image.service";
 
 @Component({
   selector: "app-galery",
@@ -10,10 +10,10 @@ import { FirestoreService } from "../../services/firestore.service";
 export class GaleryComponent implements OnInit {
   imagesData = new Array<Image>();
 
-  constructor(private firestoreService: FirestoreService) {}
+  constructor(private service: ImageService) {}
 
   ngOnInit() {
-    this.firestoreService
+    this.service
       .getAllImages()
       .subscribe((response) => (this.imagesData = response));
   }
