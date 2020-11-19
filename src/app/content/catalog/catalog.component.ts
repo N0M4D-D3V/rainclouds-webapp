@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FirestoreService } from "../../services/firestore.service";
 import { MatDialog } from "@angular/material";
 import { PlayOrBuyComponent } from "src/app/modals/play-or-buy/play-or-buy.component";
+import { Product } from "src/app/models/product";
 
 @Component({
   selector: "app-catalog",
@@ -9,7 +10,7 @@ import { PlayOrBuyComponent } from "src/app/modals/play-or-buy/play-or-buy.compo
   styleUrls: ["./catalog.component.css"],
 })
 export class CatalogComponent implements OnInit {
-  products = [];
+  products = new Array<Product>();
   displayedColumns: string[] = ["imgLink", "description", "options"];
 
   constructor(
@@ -18,10 +19,8 @@ export class CatalogComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.firestoreService.getAllProducts().subscribe((response: any) => {
-      this.products = response.sort((a, b) =>
-        a.payload.doc.data().order < b.payload.doc.data().order ? -1 : 1
-      );
+    this.firestoreService.getAllProducts().subscribe((response) => {
+      this.products = response.sort((a, b) => (a.order < b.order ? -1 : 1));
     });
   }
 

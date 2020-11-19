@@ -49,15 +49,7 @@ p {
     display: none;
   }
 
-  .card {
-    width: 250px;
-  }
-
   li {
     margin-top: 10px;
-  }
-
-  mat-dialog-content {
-    padding: 5px;
   }
 }

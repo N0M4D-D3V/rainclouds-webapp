@@ -1,5 +1,10 @@
 import { Injectable } from "@angular/core";
 import { AngularFirestore } from "@angular/fire/firestore";
+import { Observable } from "rxjs";
+import { map } from "rxjs/operators";
+import { Carousel } from "../models/carousel";
+import { Image } from "../models/image";
+import { Product } from "../models/product";
 
 @Injectable({
   providedIn: "root",
@@ -7,40 +12,96 @@ import { AngularFirestore } from "@angular/fire/firestore";
 export class FirestoreService {
   constructor(private firestore: AngularFirestore) {}
 
-  getProduct(documentId: string) {
+  getProduct(documentId: string): Observable<Product> {
     return this.firestore
-      .collection("products")
+      .collection<Product>("products")
       .doc(documentId)
-      .snapshotChanges();
+      .snapshotChanges()
+      .pipe(
+        map((response) => {
+          return this.processProduct(response);
+        })
+      );
   }
 
-  getAllProducts() {
-    return this.firestore.collection("products").snapshotChanges();
-  }
-
-  getImage(documentId: string) {
+  getAllProducts(): Observable<Product[]> {
     return this.firestore
-      .collection("images")
-      .doc(documentId)
-      .snapshotChanges();
+      .collection<Product[]>("products")
+      .snapshotChanges()
+      .pipe(
+        map((response) => {
+          return response.map((item) => {
+            return this.processProduct(item);
+          });
+        })
+      );
   }
 
-  getAllImages() {
-    return this.firestore.collection("images").snapshotChanges();
-  }
-
-  getAllSentences() {
-    return this.firestore.collection("sentences").snapshotChanges();
-  }
-
-  getCarousel(documentId: string) {
+  getImage(documentId: string): Observable<Image> {
     return this.firestore
-      .collection("carousel")
+      .collection<Image>("images")
       .doc(documentId)
-      .snapshotChanges();
+      .snapshotChanges()
+      .pipe(
+        map((response) => {
+          return this.processImage(response);
+        })
+      );
   }
 
-  getAllCarousels() {
-    return this.firestore.collection("carousel").snapshotChanges();
+  getAllImages(): Observable<Image[]> {
+    return this.firestore
+      .collection<Image[]>("images")
+      .snapshotChanges()
+      .pipe(
+        map((response) => {
+          return response.map((item) => {
+            return this.processImage(item);
+          });
+        })
+      );
+  }
+
+  getCarousel(documentId: string): Observable<Carousel> {
+    return this.firestore
+      .collection<Carousel>("carousel")
+      .doc(documentId)
+      .snapshotChanges()
+      .pipe(
+        map((response) => {
+          return this.processCarousel(response);
+        })
+      );
+  }
+
+  getAllCarousels(): Observable<Carousel[]> {
+    return this.firestore
+      .collection<Carousel[]>("carousel")
+      .snapshotChanges()
+      .pipe(
+        map((response) => {
+          return response.map((item) => {
+            return this.processCarousel(item);
+          });
+        })
+      );
+  }
+
+  private processProduct(item): Product {
+    const product = item.payload.doc.data() as Product;
+    product.id = item.payload.doc.id;
+    return product;
+  }
+
+  private processImage(item): Image {
+    const image = item.payload.doc.data() as Image;
+    image.id = item.payload.doc.id;
+    return image;
+  }
+
+  private processCarousel(item): Carousel {
+    const carousel = item.payload.doc.data() as Carousel;
+    carousel.id = item.payload.doc.id;
+    return carousel;
   }
 }
