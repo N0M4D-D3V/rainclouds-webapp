@@ -4,7 +4,7 @@
     <div class="col-md-4" *ngFor="let product of products">
       <div class="card mb-4 card-hover-efect">
         <div class="card bg-dark border-dark text-white">
-          <img src="{{product.imgLink}}" alt="image" width="100%" height="auto" focusable="false">
+          <img src="{{product.imgLink}}" alt="{{product.alt}}" width="100%" height="auto" focusable="false">
           <div class="card-img-overlay">
             <h5 class="card-title">{{product.name}}</h5>
           </div>
@@ -13,10 +13,10 @@
           <p class="card-text text-center">{{product.description}}</p>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
-              <a href="{{product.playLink}}">
+              <a target="_blank" rel="external nofollow" href="{{product.playLink}}">
                 <button type="button" class="btn btn-sm btn-outline-danger mr-1">Play</button>
               </a>
-              <a href="{{product.buyLink}}">
+              <a target="_blank" rel="external nofollow" href="{{product.buyLink}}">
                 <button type="button" class="btn btn-sm btn-outline-success mr-1">Buy</button>
               </a>
             </div>
@@ -35,7 +35,8 @@
     <ng-container matColumnDef="imgLink">
       <th mat-header-cell *matHeaderCellDef></th>
       <td mat-cell *matCellDef="let element" (click)="openPlayOrBuyDialog(element)">
-        <img src="{{element.imgLink}}" class="rounded-circle" alt="image" width="80px" height="auto" focusable="false">
+        <img src="{{element.imgLink}}" class="rounded-circle" alt="{{element.alt}}" width="80px" height="auto"
+          focusable="false">
       </td>
     </ng-container>
 

@@ -3,6 +3,7 @@ export class Product {
   buyLink: string;
   playLink: string;
   imgLink: string;
+  alt?: string;
   date: number;
   description: string;
   name?: string;

@@ -7,8 +7,8 @@
   <div class="row text-center text-lg-left">
 
     <div class="col-lg-3 col-md-4 col-6" *ngFor="let image of imagesData">
-      <a href="{{image.imageLink}}" class="d-block mb-4 h-100">
-        <img class="img-fluid img-thumbnail card-hover-efect" src="{{image.imageURL}}" alt="Image">
+      <a target="_blank" rel="external nofollow" href="{{image.imageLink}}" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail card-hover-efect" src="{{image.imageURL}}" alt="{{image.alt}}">
       </a>
     </div>
 

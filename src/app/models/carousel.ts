@@ -5,4 +5,5 @@ export class Carousel {
   headline: string;
   imageURL: string;
   paragraph?: string;
+  alt?: string;
 }
