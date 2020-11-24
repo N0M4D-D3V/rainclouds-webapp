@@ -10,7 +10,7 @@ import { PlayOrBuyComponent } from "../../modals/play-or-buy/play-or-buy.compone
   styleUrls: ["./catalog.component.css"],
 })
 export class CatalogComponent implements OnInit {
-  products = new Array<Product>();
+  products: Array<Product>;
   displayedColumns: string[] = ["imgLink", "description", "options"];
 
   constructor(private service: ProductService, private dialog: MatDialog) {}

@@ -1,5 +1,5 @@
 <!-- WEB -->
-<div class="container web-catalog">
+<div *ngIf="products" class="container web-catalog">
   <div class="row mt-3">
     <div class="col-md-4" *ngFor="let product of products">
       <div class="card mb-4 card-hover-efect">
@@ -29,7 +29,7 @@
 </div>
 
 <!-- PHONE -->
-<div class="container phone-catalog">
+<div *ngIf="products" class="container phone-catalog">
   <table mat-table [dataSource]="products">
 
     <ng-container matColumnDef="imgLink">
