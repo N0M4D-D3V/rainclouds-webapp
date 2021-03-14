@@ -1,7 +1,7 @@
 <!-- WEB CAROUSEL -->
-<mat-carousel class="web-carousel" timings="250ms ease-in" [autoplay]="true" interval="5000" color="accent"
-  maxWidth="225" proportion="45" [loop]="true" [hideArrows]="false" [hideIndicators]="true" [useKeyboard]="true"
-  [useMouseWheel]="false" orientation="ltr">
+<mat-carousel *ngIf="carousel" class="web-carousel" timings="250ms ease-in" [autoplay]="true" interval="5000"
+  color="accent" maxWidth="225" proportion="45" [loop]="true" [hideArrows]="false" [hideIndicators]="true"
+  [useKeyboard]="true" [useMouseWheel]="false" orientation="ltr">
   <mat-carousel-slide *ngFor="let item of carousel; let i = index" [hideOverlay]="true">
 
     <div>
@@ -24,9 +24,9 @@
 </mat-carousel>
 
 <!-- PHONE CAROUSEL -->
-<mat-carousel class="phone-carousel" timings="250ms ease-in" [autoplay]="true" interval="5000" color="accent"
-  maxWidth="225" proportion="45" [loop]="true" [hideArrows]="true" [hideIndicators]="true" [useKeyboard]="true"
-  [useMouseWheel]="false" orientation="ltr">
+<mat-carousel *ngIf="carousel" class="phone-carousel" timings="250ms ease-in" [autoplay]="true" interval="5000"
+  color="accent" maxWidth="225" proportion="45" [loop]="true" [hideArrows]="true" [hideIndicators]="true"
+  [useKeyboard]="true" [useMouseWheel]="false" orientation="ltr">
   <mat-carousel-slide *ngFor="let item of carousel; let i = index" [hideOverlay]="true">
 
     <div>

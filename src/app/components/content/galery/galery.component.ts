@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { delay, startWith } from "rxjs/operators";
+import { shuffle } from "src/app/common/utils";
 import { Image } from "src/app/models/image";
 import { ImageService } from "src/app/services/image.service";
 
@@ -8,13 +10,14 @@ import { ImageService } from "src/app/services/image.service";
   styleUrls: ["./galery.component.css"],
 })
 export class GaleryComponent implements OnInit {
-  imagesData = new Array<Image>();
+  imagesData: Array<Image>;
 
   constructor(private service: ImageService) {}
 
   ngOnInit() {
     this.service
       .getAllImages()
-      .subscribe((response) => (this.imagesData = response));
+      .pipe(startWith(null), delay(0))
+      .subscribe((response) => (this.imagesData = shuffle(response)));
   }
 }

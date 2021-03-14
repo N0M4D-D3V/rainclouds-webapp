@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit } from "@angular/core";
 import { MAT_DIALOG_DATA } from "@angular/material";
+import { Product } from "src/app/models/product";
 
 @Component({
   selector: "app-play-or-buy",
@@ -11,10 +12,10 @@ export class PlayOrBuyComponent implements OnInit {
   spotifyLink: string;
   themeTitle: string;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
-    this.themeTitle = data.pageValue.payload.doc.data().description;
-    this.spotifyLink = data.pageValue.payload.doc.data().playLink;
-    this.bandcampLink = data.pageValue.payload.doc.data().buyLink;
+  constructor(@Inject(MAT_DIALOG_DATA) public data: Product) {
+    this.themeTitle = data.description;
+    this.spotifyLink = data.playLink;
+    this.bandcampLink = data.buyLink;
   }
 
   ngOnInit() {}

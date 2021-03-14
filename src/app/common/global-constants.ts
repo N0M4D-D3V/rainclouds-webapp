@@ -1,10 +1,14 @@
 export class GlobalConstants {
   //RAZAK
-  public static YOUTUBE_URL: string = "https://www.youtube.com/channel/UCc2fnz8ZQ-9yGqxyI6y91MQ";
+  public static YOUTUBE_URL: string =
+    "https://www.youtube.com/channel/UCc2fnz8ZQ-9yGqxyI6y91MQ";
   public static BANDCAMP_URL: string = "https://razak.bandcamp.com/";
-  public static FACEBOOK_URL: string = "https://www.facebook.com/RazakBlackMetal";
-  public static INSTAGRAM_URL: string = "#";
+  public static FACEBOOK_URL: string =
+    "https://www.facebook.com/RazakBlackMetal";
+  public static INSTAGRAM_URL: string =
+    "https://www.instagram.com/razakblackmetal/";
   public static SPOTIFY_URL: string = "#";
+  public static TWITTER_URL: string = "https://twitter.com/RazakBlackMetal";
 
   //Alvaro
   public static ALVARO_GOMEZ_FACEBOOK: string =

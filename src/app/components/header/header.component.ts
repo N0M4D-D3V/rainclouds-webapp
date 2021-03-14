@@ -18,6 +18,7 @@ export class HeaderComponent implements OnInit {
   instagram: string = GlobalConstants.INSTAGRAM_URL;
   facebook: string = GlobalConstants.FACEBOOK_URL;
   spotify: string = GlobalConstants.SPOTIFY_URL;
+  twitter: string = GlobalConstants.TWITTER_URL;
 
   constructor(private dialog: MatDialog) {}
 

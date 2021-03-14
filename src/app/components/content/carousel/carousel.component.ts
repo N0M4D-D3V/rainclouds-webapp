@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { ChangeDetectorRef, Component, OnInit } from "@angular/core";
 import { Carousel } from "src/app/models/carousel";
 import { CarouselService } from "src/app/services/carousel.service";
 
@@ -8,13 +8,21 @@ import { CarouselService } from "src/app/services/carousel.service";
   styleUrls: ["./carousel.component.css"],
 })
 export class CarouselComponent implements OnInit {
-  carousel = new Array<Carousel>();
+  carousel: Array<Carousel>;
 
-  constructor(private service: CarouselService) {}
+  constructor(
+    private service: CarouselService,
+    private changeDetector: ChangeDetectorRef
+  ) {}
 
-  ngOnInit() {
-    this.service
-      .getAllCarousels()
-      .subscribe((response) => (this.carousel = response));
+  ngOnInit(): void {}
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.service.getAllCarousels().subscribe((response) => {
+        this.carousel = response;
+      });
+    });
+    this.changeDetector.detectChanges();
   }
 }
