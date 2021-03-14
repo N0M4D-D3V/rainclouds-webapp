@@ -1,5 +1,11 @@
 {
-  "projects": {
-    "default": "razak-bm-web"
+  "targets": {
+    "razak-bm-web": {
+      "hosting": {
+        "rainclouds-webapp": [
+          "razak-bm-web"
+        ]
+      }
+    }
   }
 }
