@@ -18,3 +18,6 @@ h1,h2,h3,h4,h5,h6, button{
 p{
     font-family: "Rooters", Arial, Helvetica, sans-serif !important;
 }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
