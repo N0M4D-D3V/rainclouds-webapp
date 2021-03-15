@@ -1,15 +1,12 @@
 import { Component, OnInit } from "@angular/core";
 import { GlobalConstants } from "../../common/global-constants";
-import { version } from "../../../../package.json";
 
 @Component({
   selector: "app-footer",
   templateUrl: "./footer.component.html",
-  styleUrls: ["./footer.component.css"],
+  styleUrls: ["./footer.component.scss"],
 })
 export class FooterComponent implements OnInit {
-  //APP
-  appVersion: string = version;
 
   //RAZAK
   youtube: string = GlobalConstants.YOUTUBE_URL;
@@ -17,6 +14,7 @@ export class FooterComponent implements OnInit {
   instagram: string = GlobalConstants.INSTAGRAM_URL;
   facebook: string = GlobalConstants.FACEBOOK_URL;
   spotify: string = GlobalConstants.SPOTIFY_URL;
+  twitter: string = GlobalConstants.TWITTER_URL;
 
   //alvaro
   alvaroGomezFacebook: string = GlobalConstants.ALVARO_GOMEZ_FACEBOOK;

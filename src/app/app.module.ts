@@ -1,72 +1,75 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import { AppComponent } from "./app.component";
-import { HeaderComponent } from "./components/header/header.component";
-import { FooterComponent } from "./components/footer/footer.component";
-import { ContentComponent } from "./components/content/content.component";
-import { CarouselComponent } from "./components/content/carousel/carousel.component";
-import { CatalogComponent } from "./components/content/catalog/catalog.component";
-import { GaleryComponent } from "./components/content/galery/galery.component";
-import { MusicModalComponent } from "./components/modals/music-modal/music-modal.component";
-import { ArtModalComponent } from "./components/modals/art-modal/art-modal.component";
-import { ContactModalComponent } from "./components/modals/contact-modal/contact-modal.component";
-import { PlayOrBuyComponent } from "./components/modals/play-or-buy/play-or-buy.component";
-import { ProductionComponent } from "./components/modals/production/production.component";
-import { SentencesComponent } from "./components/content/sentences/sentences.component";
+import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-// Firebase
-import { AngularFireModule } from "@angular/fire";
-import { environment } from "../environments/environment";
+//FIREBASE
+import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from "@angular/fire/firestore";
-import { AngularFireStorageModule } from "@angular/fire/storage";
-import { AngularFireAuthModule } from "@angular/fire/auth";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
-// Material
-import { MatCarouselModule } from "@ngmodule/material-carousel";
-import { MatDialogModule } from "@angular/material";
-import { MatTableModule } from "@angular/material/table";
-import { MatIconModule } from "@angular/material/icon";
-import { MatButtonModule } from "@angular/material/button";
+//MATERIAL
+import {MatTableModule} from '@angular/material/table';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatButtonModule} from '@angular/material/button';
+
+import { NgbModule, NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+
+//ENVIROMENT
+import { environment } from '../environments/environment.prod';
+
+//MODALS
+import { ArtModalComponent } from './modals/art-modal/art-modal.component';
+import { ContactModalComponent } from './modals/contact-modal/contact-modal.component';
+import { MusicModalComponent } from './modals/music-modal/music-modal.component';
+import { PlayOrBuyComponent } from './modals/play-or-buy/play-or-buy.component';
+import { ProductionModalComponent } from './modals/production-modal/production-modal.component';
+
+//COMPONENTS
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ContentComponent } from './components/content/content.component';
+import { CarouselComponent } from './components/content/components/carousel/carousel.component';
+import { CatalogComponent } from './components/content/components/catalog/catalog.component';
+import { GaleryComponent } from './components/content/components/galery/galery.component';
+import { SentencesComponent } from './components/content/components/sentences/sentences.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ArtModalComponent,
+    ContactModalComponent,
+    MusicModalComponent,
+    PlayOrBuyComponent,
+    ProductionModalComponent,
     HeaderComponent,
     FooterComponent,
     ContentComponent,
     CarouselComponent,
     CatalogComponent,
     GaleryComponent,
-    SentencesComponent,
-    MusicModalComponent,
-    ArtModalComponent,
-    ContactModalComponent,
-    PlayOrBuyComponent,
-    ProductionComponent,
+    SentencesComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserAnimationsModule,
+    NgbModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule, // Only required for database features
-    AngularFireAuthModule, // Only required for auth features,
-    AngularFireStorageModule,
-    BrowserAnimationsModule, // Only required for storage features
-    MatCarouselModule,
-    MatDialogModule,
+    AngularFirestoreModule,
     MatTableModule,
     MatIconModule,
+    MatDialogModule,
     MatButtonModule,
   ],
-  providers: [],
+  providers: [NgbCarouselConfig],
   bootstrap: [AppComponent],
   entryComponents: [
-    MusicModalComponent,
     ArtModalComponent,
     ContactModalComponent,
+    MusicModalComponent,
     PlayOrBuyComponent,
-    ProductionComponent,
-  ],
+    ProductionModalComponent
+  ]
 })
-export class AppModule {}
+export class AppModule { }

@@ -1,18 +1,23 @@
-html,
-body {
-  height: 100%;
+@font-face{
+    font-family: "PentaGramsMalefissent";
+    src: local("PentaGramsMalefissent"), url(./assets/fonts/PentaGramsMalefissent.ttf) format("truetype")
 }
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: whitesmoke;
+
+@font-face{
+    font-family: "Rooters";
+    src: local("Rooters"), url(./assets/fonts/Rooters.ttf) format("truetype")
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-a {
-  font-family: Impact, Charcoal, sans-serif;
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+h1,h2,h3,h4,h5,h6, button{
+    font-family: "PentaGramsMalefissent", Arial, Helvetica, sans-serif !important;
 }
+
+p{
+    font-family: "Rooters", Arial, Helvetica, sans-serif !important;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
