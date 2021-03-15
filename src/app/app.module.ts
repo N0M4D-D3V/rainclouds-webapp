@@ -29,6 +29,11 @@ import { ProductionModalComponent } from './modals/production-modal/production-m
 //COMPONENTS
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ContentComponent } from './components/content/content.component';
+import { CarouselComponent } from './components/content/components/carousel/carousel.component';
+import { CatalogComponent } from './components/content/components/catalog/catalog.component';
+import { GaleryComponent } from './components/content/components/galery/galery.component';
+import { SentencesComponent } from './components/content/components/sentences/sentences.component';
 
 @NgModule({
   declarations: [
@@ -39,14 +44,19 @@ import { FooterComponent } from './components/footer/footer.component';
     PlayOrBuyComponent,
     ProductionModalComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ContentComponent,
+    CarouselComponent,
+    CatalogComponent,
+    GaleryComponent,
+    SentencesComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
+    NgbModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
-    NgbModule,
     MatTableModule,
     MatIconModule,
     MatDialogModule,

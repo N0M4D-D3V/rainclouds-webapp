@@ -1,0 +1,76 @@
+a.button {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .phone-catalog {
+    display: none;
+  }
+  
+  .web-catalog {
+    display: block;
+  }
+  
+  table {
+    width: 99%;
+    border-collapse: separate !important;
+    border-spacing: 0px 5px !important;
+    background-color: transparent;
+  }
+  
+  .mat-header-row {
+    display: none;
+  }
+  
+  .mat-cell {
+    padding: 5px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .mat-cell:first-child {
+    /* row border */
+    border-left: 1px solid black;
+    border-radius: 15px 0px 0px 15px;
+  }
+  
+  td.mat-cell:last-child {
+    /* row border */
+    border-right: 1px solid black;
+    border-radius: 0px 15px 15px 0px;
+  }
+  
+  span {
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 0.8rem;
+  }
+  
+  @media screen and (min-width: 600px) {
+    .card-hover-efect {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+      transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+        0.3s box-shadow,
+        0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+    }
+  
+    .card-hover-efect:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(255, 7, 58, 0.15),
+        0 4px 8px rgba(128, 29, 25, 0.36);
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .phone-catalog {
+      display: block;
+    }
+  
+    .web-catalog {
+      display: none;
+    }
+  
+    h5 {
+      text-align: center;
+      text-shadow: 2px 2px black;
+    }
+  }
