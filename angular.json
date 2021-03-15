@@ -187,7 +187,7 @@
           "builder": "@angular/fire:deploy",
           "options": {
             "ssr": true,
-            "functionsNodeVersion": 12
+            "functionsNodeVersion": 14
           }
         }
       }
