@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" routerLinkActive="active" [routerLink]="['/home']">
       <img src="assets/images/razak_logo.png" width="60" alt="RazaK Logo" />
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -13,16 +13,16 @@
           <a class="nav-link" href="https://razak-black-metal.creator-spring.com/" target="_blank">Merch</a>
         </li>
         <li class="nav-item">
-          <p class="nav-link" (click)="openMusicDialog()">Music</p>
+          <p class="nav-link" (click)="openMusicDialog()" [routerLink]="['/catalog']">Music</p>
         </li>
         <li class="nav-item">
-          <p class="nav-link" (click)="openArtDialog()">Art</p>
+          <p class="nav-link" (click)="openArtDialog()" [routerLink]="['/gallery']">Gallery</p>
         </li>
         <li class="nav-item">
           <p class="nav-link" (click)="openProductionDialog()">Production</p>
         </li>
         <li class="nav-item">
-          <p class="nav-link" (click)="openContactDialog()">Contact</p>
+          <p class="nav-link" (click)="openContactDialog()">About</p>
         </li>
       </ul>
   

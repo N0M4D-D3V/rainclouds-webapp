@@ -1,0 +1,26 @@
+@keyframes opacity_transition {
+    0% {filter: opacity(100%);}
+    100% {filter: opacity(60%);}
+  }
+
+  .card-img-overlay{
+    margin-top: 20%;
+}
+
+.main-home-title{
+    font-size: 6em;
+    animation: backInLeft;
+    animation-duration: 4s;
+}
+
+.main-home-text{
+    font-style: italic;
+    animation: backInRight;
+    animation-duration: 4s;
+}
+
+.main-home-img {
+    animation-name: opacity_transition;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}

@@ -6,13 +6,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //FIREBASE
 import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 //MATERIAL
-import {MatTableModule} from '@angular/material/table';
-import {MatIconModule} from '@angular/material/icon';
-import {MatDialogModule} from "@angular/material/dialog";
-import {MatButtonModule} from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 import { NgbModule, NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
@@ -29,11 +29,11 @@ import { ProductionModalComponent } from './modals/production-modal/production-m
 //COMPONENTS
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ContentComponent } from './components/content/content.component';
-import { CarouselComponent } from './components/content/components/carousel/carousel.component';
-import { CatalogComponent } from './components/content/components/catalog/catalog.component';
-import { GaleryComponent } from './components/content/components/galery/galery.component';
-import { SentencesComponent } from './components/content/components/sentences/sentences.component';
+import { CatalogComponent } from './components/content/catalog/catalog.component';
+import { GaleryComponent } from './components/content/galery/galery.component';
+import { SentencesComponent } from './components/content/sentences/sentences.component';
+import { HomeComponent } from './components/content/home/home.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -45,15 +45,15 @@ import { SentencesComponent } from './components/content/components/sentences/se
     ProductionModalComponent,
     HeaderComponent,
     FooterComponent,
-    ContentComponent,
-    CarouselComponent,
     CatalogComponent,
     GaleryComponent,
-    SentencesComponent
+    SentencesComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
+    AppRoutingModule,
     NgbModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
@@ -69,7 +69,7 @@ import { SentencesComponent } from './components/content/components/sentences/se
     ContactModalComponent,
     MusicModalComponent,
     PlayOrBuyComponent,
-    ProductionModalComponent
-  ]
+    ProductionModalComponent,
+  ],
 })
-export class AppModule { }
+export class AppModule {}
