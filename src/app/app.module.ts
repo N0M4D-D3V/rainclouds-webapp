@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { AppRoutingModule } from './app-routing.module';
+
 //FIREBASE
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -31,9 +33,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CatalogComponent } from './components/content/catalog/catalog.component';
 import { GaleryComponent } from './components/content/galery/galery.component';
-import { SentencesComponent } from './components/content/sentences/sentences.component';
+import { SentencesComponent } from './components/content/lyrics/sentences/sentences.component';
 import { HomeComponent } from './components/content/home/home.component';
-import { AppRoutingModule } from './app-routing.module';
+import { AboutComponent } from './components/content/about/about.component';
+import { LyricsComponent } from './components/content/lyrics/lyrics.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +52,8 @@ import { AppRoutingModule } from './app-routing.module';
     GaleryComponent,
     SentencesComponent,
     HomeComponent,
+    LyricsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
