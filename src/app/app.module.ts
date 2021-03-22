@@ -37,6 +37,7 @@ import { SentencesComponent } from './components/content/lyrics/sentences/senten
 import { HomeComponent } from './components/content/home/home.component';
 import { AboutComponent } from './components/content/about/about.component';
 import { LyricsComponent } from './components/content/lyrics/lyrics.component';
+import { BannerComponent } from './components/content/catalog/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { LyricsComponent } from './components/content/lyrics/lyrics.component';
     SentencesComponent,
     HomeComponent,
     LyricsComponent,
-    AboutComponent
+    AboutComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
