@@ -11,7 +11,10 @@ import { ImageService } from "src/app/services/image.service";
   styleUrls: ["./galery.component.scss"],
 })
 export class GaleryComponent implements OnInit {
-  imagesData: Array<Image> = new Array<Image>();
+  public bannerImg: string = "https://imgur.com/VvyKjio.jpg"
+  public type:string = "GALLERY";
+  
+  public imagesData: Array<Image> = new Array<Image>();
 
   constructor(private service: ImageService) {}
 

@@ -2,10 +2,12 @@
     <div class="card bg-dark text-white text-center">
       <img
         class="card-img banner-img "
-        src="https://imgur.com/HS1SQYJ.jpg"
+        src="{{imageSrc}}"
         alt="listen to us"
       />
-      <div class="card-img-overlay">
+
+      <!-- MUSIC -->
+      <div class="card-img-overlay" *ngIf="type.toUpperCase() === 'MUSIC'">
         <h1 class="card-title banner-title">Listen to Us!</h1>
         <div class="card-text banner-text">
           <ul class="list-unstyled list-inline text-center">
@@ -57,5 +59,46 @@
           </ul>
         </div>
       </div>
+
+
+            <!-- GALLERY -->
+            <div class="card-img-overlay" *ngIf="type.toUpperCase() === 'GALLERY'">
+              <h1 class="card-title banner-title">GALLERY</h1>
+              <div class="card-text banner-text">
+                <ul class="list-unstyled list-inline text-center">
+                  <li class="list-inline-item">
+                    <a
+                      rel="external nofollow"
+                      target="_blank"
+                      class="btn-floating btn-gplus mx-3"
+                      href="{{ instagram }}"
+                    >
+                      <img
+                        class="hover-animation"
+                        src="assets/images/instagram.png"
+                        width="25"
+                        alt="razak instagram"
+                      />
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a
+                      rel="external nofollow"
+                      target="_blank"
+                      class="btn-floating btn-gplus mx-3"
+                      (click)="openArtDialog()"
+                    >
+                      <img
+                        class="hover-animation"
+                        src="assets/images/info-button.png"
+                        width="25"
+                        alt="razak info button"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
     </div>
   </div>

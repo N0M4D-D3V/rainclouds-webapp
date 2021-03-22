@@ -15,6 +15,9 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./catalog.component.scss'],
 })
 export class CatalogComponent implements OnInit, AfterViewInit {
+  public bannerImg: string = 'https://imgur.com/HS1SQYJ.jpg';
+  public type: string = 'MUSIC';
+
   public products: Array<Product> = new Array<Product>();
   public displayedColumns: string[] = ['imgLink', 'description', 'options'];
 
