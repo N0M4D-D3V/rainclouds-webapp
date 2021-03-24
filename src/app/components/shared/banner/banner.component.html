@@ -1,104 +1,105 @@
 <div class="web-catalog">
-    <div class="card bg-dark text-white text-center">
-      <img
-        class="card-img banner-img "
-        src="{{imageSrc}}"
-        alt="listen to us"
-      />
+  <div class="card bg-dark text-white text-center">
+    <img class="card-img banner-img" src="{{ imageSrc }}" alt="listen to us" />
 
-      <!-- MUSIC -->
-      <div class="card-img-overlay" *ngIf="type.toUpperCase() === 'CATALOG'">
-        <h1 class="card-title banner-title">Listen to Us!</h1>
-        <div class="card-text banner-text">
-          <ul class="list-unstyled list-inline text-center">
-            <li class="list-inline-item">
-              <a
-                rel="external nofollow"
-                target="_blank"
-                class="btn-floating btn-gplus mx-3"
-                href="{{ youtube }}"
-              >
-                <img
-                  class="hover-animation"
-                  src="assets/images/youtube.png"
-                  width="25"
-                  alt="razak youtube"
-                />
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a
-                rel="external nofollow"
-                target="_blank"
-                class="btn-floating btn-gplus mx-3"
-                href="{{ spotify }}"
-              >
-                <img
-                  class="hover-animation"
-                  src="assets/images/spotify.png"
-                  width="25"
-                  alt="razak spotify"
-                />
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a
-                rel="external nofollow"
-                target="_blank"
-                class="btn-floating btn-li mx-3"
-                href="{{ bandcamp }}"
-              >
-                <img
-                  class="hover-animation"
-                  src="assets/images/bandcamp.png"
-                  width="25"
-                  alt="razak bandcamp"
-                />
-              </a>
-            </li>
-          </ul>
-        </div>
+    <!-- MUSIC -->
+    <div class="card-img-overlay" *ngIf="type.toUpperCase() === 'CATALOG'">
+      <h1 class="card-title banner-title">Listen to Us!</h1>
+      <div class="card-text banner-text">
+        <ul class="list-unstyled list-inline text-center">
+          <li class="list-inline-item">
+            <a
+              rel="external nofollow"
+              target="_blank"
+              class="btn-floating btn-gplus mx-3"
+              href="{{ youtube }}"
+            >
+              <img
+                class="hover-animation"
+                src="assets/images/youtube.png"
+                width="25"
+                alt="razak youtube"
+              />
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              rel="external nofollow"
+              target="_blank"
+              class="btn-floating btn-gplus mx-3"
+              href="{{ spotify }}"
+            >
+              <img
+                class="hover-animation"
+                src="assets/images/spotify.png"
+                width="25"
+                alt="razak spotify"
+              />
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              rel="external nofollow"
+              target="_blank"
+              class="btn-floating btn-li mx-3"
+              href="{{ bandcamp }}"
+            >
+              <img
+                class="hover-animation"
+                src="assets/images/bandcamp.png"
+                width="25"
+                alt="razak bandcamp"
+              />
+            </a>
+          </li>
+        </ul>
       </div>
+    </div>
 
+    <!-- LYRICS -->
+    <div class="card-img-overlay" *ngIf="type.toUpperCase() === 'LYRICS'">
+      <h1 class="card-title banner-title">Lyrics</h1>
+      <div class="card-text banner-text">
+      </div>
+    </div>
 
-            <!-- GALLERY -->
-            <div class="card-img-overlay" *ngIf="type.toUpperCase() === 'GALLERY'">
-              <h1 class="card-title banner-title">GALLERY</h1>
-              <div class="card-text banner-text">
-                <ul class="list-unstyled list-inline text-center">
-                  <li class="list-inline-item">
-                    <a
-                      rel="external nofollow"
-                      target="_blank"
-                      class="btn-floating btn-gplus mx-3"
-                      href="{{ instagram }}"
-                    >
-                      <img
-                        class="hover-animation"
-                        src="assets/images/instagram.png"
-                        width="25"
-                        alt="razak instagram"
-                      />
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a
-                      rel="external nofollow"
-                      target="_blank"
-                      class="btn-floating btn-gplus mx-3"
-                      (click)="openArtDialog()"
-                    >
-                      <img
-                        class="hover-animation"
-                        src="assets/images/info-button.png"
-                        width="25"
-                        alt="razak info button"
-                      />
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
+    <!-- GALLERY -->
+    <div class="card-img-overlay" *ngIf="type.toUpperCase() === 'GALLERY'">
+      <h1 class="card-title banner-title">GALLERY</h1>
+      <div class="card-text banner-text">
+        <ul class="list-unstyled list-inline text-center">
+          <li class="list-inline-item">
+            <a
+              rel="external nofollow"
+              target="_blank"
+              class="btn-floating btn-gplus mx-3"
+              href="{{ instagram }}"
+            >
+              <img
+                class="hover-animation"
+                src="assets/images/instagram.png"
+                width="25"
+                alt="razak instagram"
+              />
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              rel="external nofollow"
+              target="_blank"
+              class="btn-floating btn-gplus mx-3"
+              (click)="openArtDialog()"
+            >
+              <img
+                class="hover-animation"
+                src="assets/images/info-button.png"
+                width="25"
+                alt="razak info button"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
+</div>
