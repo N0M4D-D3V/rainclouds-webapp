@@ -27,7 +27,10 @@ export class LyricsComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.lyricService
       .getAllLyrics()
-      .subscribe((response) => (this.lyrics = response));
+      .subscribe((response) => {
+        this.lyrics = response
+        console.log(response)
+      });
   }
 
   ngAfterViewInit() {

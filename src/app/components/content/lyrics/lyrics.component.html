@@ -1,4 +1,29 @@
 <app-banner [imageSrc]="bannerImg" [type]="type"></app-banner>
-<iframe
-src="https://www.youtube.com/embed/ByqMcr913wo">
-</iframe>
+
+<div *ngIf="lyrics" class="container">
+  <div class="row mt-3">
+    <div class="col-md-6" *ngFor="let lyric of lyrics">
+      <a href="{{ lyric.songLink }}" target="_blank"> 
+        <div class="card border-warning mb-3 card-hover-effect">
+            <div class="card-body">
+              <h5 class="card-title text-center">{{ lyric.songName }}</h5>
+              <hr />
+              <div
+                class="card-text text-center"
+                *ngFor="let paragraph of lyric.paragraphs"
+              >
+                <p *ngFor="let verse of paragraph">{{ verse }}</p>
+                <br />
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">{{ lyric.cdName }}</small>
+                <small class="text-muted">Author: {{ lyric.author }}</small>
+              </div>
+            </div>
+          </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<iframe src="https://www.youtube.com/embed/ByqMcr913wo"> </iframe>

@@ -1,36 +1,62 @@
-@import '../node_modules/animate.css/animate.min';
+@import "../node_modules/animate.css/animate.min";
 
-@font-face{
-    font-family: "PentaGramsMalefissent";
-    src: local("PentaGramsMalefissent"), url(./assets/fonts/PentaGramsMalefissent.ttf) format("truetype")
+@font-face {
+  font-family: "PentaGramsMalefissent";
+  src: local("PentaGramsMalefissent"),
+    url(./assets/fonts/PentaGramsMalefissent.ttf) format("truetype");
 }
 
-@font-face{
-    font-family: "Rooters";
-    src: local("Rooters"), url(./assets/fonts/Rooters.ttf) format("truetype")
+@font-face {
+  font-family: "Rooters";
+  src: local("Rooters"), url(./assets/fonts/Rooters.ttf) format("truetype");
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-h1,h2,h3,h4,h5,h6, button{
-    font-family: "PentaGramsMalefissent", Arial, Helvetica, sans-serif !important;
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-p{
-    font-family: "Rooters", Arial, Helvetica, sans-serif !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: "PentaGramsMalefissent", Arial, Helvetica, sans-serif !important;
+}
+
+p {
+  font-family: "Rooters", Arial, Helvetica, sans-serif !important;
 }
 
 @media screen and (min-width: 600px) {
-    .hover-animation {
-      transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s,
-        0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
-    }
-  
-    .hover-animation:hover {
-      transform: scale(1.2);
-    }
+  .hover-animation {
+    transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s,
+      0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
   }
 
+  .hover-animation:hover {
+    transform: scale(1.2);
+  }
+
+  .card-hover-effect {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+    transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+      0.3s box-shadow,
+      0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  }
+
+  .card-hover-effect:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 7, 58, 0.15),
+      0 4px 8px rgba(128, 29, 25, 0.36);
+  }
+}
+
 /* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
