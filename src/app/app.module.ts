@@ -15,11 +15,15 @@ import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 
 import { NgbModule, NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 //ENVIROMENT
 import { environment } from '../environments/environment.prod';
+
+//PIPES
+import { FilterPipe } from './common/pipes/search.pipe';
 
 //MODALS
 import { ArtModalComponent } from './modals/art-modal/art-modal.component';
@@ -53,7 +57,8 @@ import { BannerComponent } from './components/shared/banner/banner.component';
     HomeComponent,
     LyricsComponent,
     AboutComponent,
-    BannerComponent
+    BannerComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -66,6 +71,7 @@ import { BannerComponent } from './components/shared/banner/banner.component';
     MatIconModule,
     MatDialogModule,
     MatButtonModule,
+    MatInputModule,
   ],
   providers: [NgbCarouselConfig],
   bootstrap: [AppComponent],

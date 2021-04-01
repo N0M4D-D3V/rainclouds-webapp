@@ -17,7 +17,8 @@ export class LyricsComponent implements OnInit, AfterViewInit {
   public bannerImg: string = BannerImages.BANNER_IMG_CATALOG;
   public type: string = 'LYRICS';
 
-  public lyrics: Lyric[] = new Array<Lyric>();
+  private allLyrics: Lyric[] = new Array<Lyric>();
+  public filteredLyrics: Lyric[] = new Array<Lyric>();
 
   constructor(
     private cdr: ChangeDetectorRef,
@@ -25,12 +26,32 @@ export class LyricsComponent implements OnInit, AfterViewInit {
   ) {}
 
   ngOnInit(): void {
-    this.lyricService
-      .getAllLyrics()
-      .subscribe((response) => (this.lyrics = response));
+    this.lyricService.getAllLyrics().subscribe((response) => {
+      this.allLyrics = response;
+      this.filteredLyrics = response;
+    });
   }
 
   ngAfterViewInit() {
     this.cdr.detectChanges();
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.filteredLyrics = this.allLyrics.filter(
+      (lyric) =>
+        lyric.songName
+          .trim()
+          .toLocaleLowerCase()
+          .includes(filterValue.trim().toLocaleLowerCase()) ||
+        lyric.author
+          .trim()
+          .toLocaleLowerCase()
+          .includes(filterValue.trim().toLocaleLowerCase()) ||
+        lyric.cdName
+          .trim()
+          .toLocaleLowerCase()
+          .includes(filterValue.trim().toLocaleLowerCase())
+    );
   }
 }

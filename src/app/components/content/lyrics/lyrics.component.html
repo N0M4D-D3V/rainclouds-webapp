@@ -1,11 +1,24 @@
 <app-banner [imageSrc]="bannerImg" [type]="type"></app-banner>
 
-<div *ngIf="lyrics" class="container">
-  <div class="card-columns mt-3">
-    <div class="" *ngFor="let lyric of lyrics">
+<div *ngIf="filteredLyrics" class="container">
+  <div class="text-center mt-3">
+    <mat-form-field>
+      <input
+        class="toolbar-search"
+        (keyup)="applyFilter($event)"
+        type="text"
+        matInput
+        placeholder="Search..."
+      />
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </div>
+
+  <div class="card-columns mt-5">
+    <div *ngFor="let lyric of filteredLyrics">
       <a href="{{ lyric.songLink }}" target="_blank">
         <div
-          class="card border-warning mb-3 hover-effect"
+          class="card border-warning mb-3"
           [ngClass]="{
             'border-danger': lyric?.cdName?.toLowerCase() === 'eclipse',
             'border-warning': lyric?.cdName?.toLowerCase() === 'cover'
@@ -19,7 +32,7 @@
               *ngFor="let paragraph of lyric.paragraphs; let indx = index"
             >
               <p *ngIf="indx != 0"><>---<>---<>---<>---<>---<></p>
-              <p *ngFor="let verse of paragraph">{{ verse }}</p>
+              <p class="m-0" *ngFor="let verse of paragraph">{{ verse }}</p>
             </div>
             <div class="d-flex justify-content-between align-items-center">
               <small class="text-muted">{{ lyric.cdName }}</small>
