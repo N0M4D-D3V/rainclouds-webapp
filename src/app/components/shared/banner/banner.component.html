@@ -3,72 +3,54 @@
     <img class="card-img banner-img" src="{{ imageSrc }}" alt="listen to us" />
 
     <!-- MUSIC -->
-    <div class="card-img-overlay" *ngIf="type.toUpperCase() === 'CATALOG'">
-      <h1 class="card-title banner-title">Listen to Us!</h1>
+    <div class="card-img-overlay">
+      <h1
+        class="card-title banner-title"
+        *ngIf="type.toUpperCase() === 'CATALOG'"
+      >
+        Listen to Us!
+      </h1>
+      <h1
+        class="card-title banner-title"
+        *ngIf="type.toUpperCase() === 'LYRICS'"
+      >
+        Lyrics
+      </h1>
+      <h1
+        class="card-title banner-title"
+        *ngIf="type.toUpperCase() === 'GALLERY'"
+      >
+        GALLERY
+      </h1>
+      <h1
+        class="card-title banner-title"
+        *ngIf="type.toUpperCase() === 'ABOUT'"
+      >
+        About Us!
+      </h1>
       <div class="card-text banner-text">
         <ul class="list-unstyled list-inline text-center">
-          <li class="list-inline-item">
+          <li class="list-inline-item" *ngIf="type.toUpperCase() === 'ABOUT'">
             <a
               rel="external nofollow"
               target="_blank"
               class="btn-floating btn-gplus mx-3"
-              href="{{ youtube }}"
+              href="{{ facebook }}"
             >
               <img
                 class="hover-animation"
-                src="assets/images/youtube.png"
+                src="assets/images/facebook.png"
                 width="25"
-                alt="razak youtube"
+                alt="razak facebook"
               />
             </a>
           </li>
-          <li class="list-inline-item">
-            <a
-              rel="external nofollow"
-              target="_blank"
-              class="btn-floating btn-gplus mx-3"
-              href="{{ spotify }}"
-            >
-              <img
-                class="hover-animation"
-                src="assets/images/spotify.png"
-                width="25"
-                alt="razak spotify"
-              />
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a
-              rel="external nofollow"
-              target="_blank"
-              class="btn-floating btn-li mx-3"
-              href="{{ bandcamp }}"
-            >
-              <img
-                class="hover-animation"
-                src="assets/images/bandcamp.png"
-                width="25"
-                alt="razak bandcamp"
-              />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- LYRICS -->
-    <div class="card-img-overlay" *ngIf="type.toUpperCase() === 'LYRICS'">
-      <h1 class="card-title banner-title">Lyrics</h1>
-      <div class="card-text banner-text">
-      </div>
-    </div>
-
-    <!-- GALLERY -->
-    <div class="card-img-overlay" *ngIf="type.toUpperCase() === 'GALLERY'">
-      <h1 class="card-title banner-title">GALLERY</h1>
-      <div class="card-text banner-text">
-        <ul class="list-unstyled list-inline text-center">
-          <li class="list-inline-item">
+          <li
+            class="list-inline-item"
+            *ngIf="
+              type.toUpperCase() === 'GALLERY' || type.toUpperCase() === 'ABOUT'
+            "
+          >
             <a
               rel="external nofollow"
               target="_blank"
@@ -83,7 +65,87 @@
               />
             </a>
           </li>
-          <li class="list-inline-item">
+          <li class="list-inline-item" *ngIf="type.toUpperCase() === 'ABOUT'">
+            <a
+              rel="external nofollow"
+              target="_blank"
+              class="btn-floating btn-gplus mx-3"
+              href="{{ twitter }}"
+            >
+              <img
+                class="hover-animation"
+                src="assets/images/twitter.png"
+                width="25"
+                alt="razak twitter"
+              />
+            </a>
+          </li>
+          <li
+            class="list-inline-item"
+            *ngIf="
+              type.toUpperCase() === 'CATALOG' || type.toUpperCase() === 'ABOUT'
+            "
+          >
+            <a
+              rel="external nofollow"
+              target="_blank"
+              class="btn-floating btn-gplus mx-3"
+              href="{{ youtube }}"
+            >
+              <img
+                class="hover-animation"
+                src="assets/images/youtube.png"
+                width="25"
+                alt="razak youtube"
+              />
+            </a>
+          </li>
+          <li
+            class="list-inline-item"
+            *ngIf="
+              type.toUpperCase() === 'CATALOG' || type.toUpperCase() === 'ABOUT'
+            "
+          >
+            <a
+              rel="external nofollow"
+              target="_blank"
+              class="btn-floating btn-gplus mx-3"
+              href="{{ spotify }}"
+            >
+              <img
+                class="hover-animation"
+                src="assets/images/spotify.png"
+                width="25"
+                alt="razak spotify"
+              />
+            </a>
+          </li>
+          <li
+            class="list-inline-item"
+            *ngIf="
+              type.toUpperCase() === 'CATALOG' || type.toUpperCase() === 'ABOUT'
+            "
+          >
+            <a
+              rel="external nofollow"
+              target="_blank"
+              class="btn-floating btn-li mx-3"
+              href="{{ bandcamp }}"
+            >
+              <img
+                class="hover-animation"
+                src="assets/images/bandcamp.png"
+                width="25"
+                alt="razak bandcamp"
+              />
+            </a>
+          </li>
+          <li
+            class="list-inline-item"
+            *ngIf="
+              type.toUpperCase() === 'GALLERY' || type.toUpperCase() === 'ABOUT'
+            "
+          >
             <a
               rel="external nofollow"
               target="_blank"

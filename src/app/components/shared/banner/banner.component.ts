@@ -16,10 +16,10 @@ export class BannerComponent implements OnInit {
   public spotify: string = GlobalConstants.SPOTIFY_URL;
   public bandcamp: string = GlobalConstants.BANDCAMP_URL;
   public instagram: string = GlobalConstants.INSTAGRAM_URL;
+  public facebook: string = GlobalConstants.FACEBOOK_URL;
+  public twitter: string = GlobalConstants.TWITTER_URL;
 
-  constructor(
-    private dialog: MatDialog
-  ) {}
+  constructor(private dialog: MatDialog) {}
 
   ngOnInit(): void {}
 
