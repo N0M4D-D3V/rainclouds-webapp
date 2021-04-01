@@ -4,7 +4,13 @@
   <div class="card-columns mt-3">
     <div class="" *ngFor="let lyric of lyrics">
       <a href="{{ lyric.songLink }}" target="_blank">
-        <div class="card border-warning mb-3">
+        <div
+          class="card border-warning mb-3 hover-effect"
+          [ngClass]="{
+            'border-danger': lyric?.cdName?.toLowerCase() === 'eclipse',
+            'border-warning': lyric?.cdName?.toLowerCase() === 'cover'
+          }"
+        >
           <div class="card-body">
             <h5 class="card-title text-center">{{ lyric.songName }}</h5>
             <hr />
