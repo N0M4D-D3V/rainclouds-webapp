@@ -33,7 +33,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CatalogComponent } from './components/content/catalog/catalog.component';
 import { GaleryComponent } from './components/content/galery/galery.component';
-import { SentencesComponent } from './components/content/lyrics/sentences/sentences.component';
 import { HomeComponent } from './components/content/home/home.component';
 import { AboutComponent } from './components/content/about/about.component';
 import { LyricsComponent } from './components/content/lyrics/lyrics.component';
@@ -51,7 +50,6 @@ import { BannerComponent } from './components/shared/banner/banner.component';
     FooterComponent,
     CatalogComponent,
     GaleryComponent,
-    SentencesComponent,
     HomeComponent,
     LyricsComponent,
     AboutComponent,

@@ -1,5 +1,5 @@
 export interface Lyric {
-    id?:string;
+  id?: string;
   songName: string;
   cdName: string;
   author: string;
