@@ -18,7 +18,7 @@
     <div *ngFor="let lyric of filteredLyrics">
       <a href="{{ lyric.songLink }}" target="_blank">
         <div
-          class="card border-warning mb-3"
+          class="card border-warning mb-3 card-appears-effect"
           [ngClass]="{
             'border-danger': lyric?.cdName?.toLowerCase() === 'eclipse',
             'border-warning': lyric?.cdName?.toLowerCase() === 'cover'
