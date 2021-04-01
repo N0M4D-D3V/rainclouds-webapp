@@ -6,7 +6,7 @@ import {
 } from '@angular/core';
 import { BannerImages } from 'src/app/common/global-constants';
 import { Lyric } from 'src/app/interfaces/lyric';
-import { LyricService } from '../../../services/lyric.service';
+import { LyricService } from 'src/app/services/lyric.service';
 
 @Component({
   selector: 'app-lyrics',
@@ -27,10 +27,7 @@ export class LyricsComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.lyricService
       .getAllLyrics()
-      .subscribe((response) => {
-        this.lyrics = response
-        console.log(response)
-      });
+      .subscribe((response) => (this.lyrics = response));
   }
 
   ngAfterViewInit() {

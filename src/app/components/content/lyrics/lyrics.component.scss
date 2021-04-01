@@ -14,6 +14,10 @@ a{
   font-size: 2em;
 }
 
+.card{
+  display: inline-block;
+}
+
 .card-hover-effect:hover {
   cursor: pointer;
 }
