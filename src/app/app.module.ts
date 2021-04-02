@@ -41,6 +41,9 @@ import { HomeComponent } from './components/content/home/home.component';
 import { AboutComponent } from './components/content/about/about.component';
 import { LyricsComponent } from './components/content/lyrics/lyrics.component';
 import { BannerComponent } from './components/shared/banner/banner.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -72,6 +75,8 @@ import { BannerComponent } from './components/shared/banner/banner.component';
     MatDialogModule,
     MatButtonModule,
     MatInputModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [NgbCarouselConfig],
   bootstrap: [AppComponent],
