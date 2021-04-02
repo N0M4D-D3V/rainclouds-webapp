@@ -38,6 +38,16 @@ p {
   filter: invert(1);
 }
 
+.card-appears-effect{
+  animation: fadeInUpBig;
+  animation-duration: 0.5s;
+}
+
+.no-data-effect{
+  animation: bounceIn;
+  animation-duration: 1.0s;
+}
+
 @media screen and (min-width: 600px) {
   .hover-animation {
     transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s,

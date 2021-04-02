@@ -1,9 +1,30 @@
 <!-- WEB -->
 <app-banner [imageSrc]="bannerImg" [type]="type"></app-banner>
-<div *ngIf="products" class="container web-catalog">
+
+<div *ngIf="filteredProducts" class="container">
+  <div class="text-center mt-3">
+    <mat-form-field>
+      <input
+        class="toolbar-search"
+        (keyup)="applyFilter($event)"
+        type="text"
+        matInput
+        placeholder="Search..."
+      />
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </div>
+
+  <div *ngIf="filteredProducts.length <= 0">
+    <h2 class="text-danger text-center no-data-effect m-5 p-5">
+      Product not found...
+    </h2>
+  </div>
+
+<div *ngIf="filteredProducts" class="container web-catalog">
   <div class="row mt-3">
-    <div class="col-md-4" *ngFor="let product of products">
-      <div class="card mb-4 card-hover-effect">
+    <div class="col-md-4" *ngFor="let product of filteredProducts">
+      <div class="card mb-4 card-hover-effect card-appears-effect">
         <div class="card bg-dark border-dark text-white">
           <img
             src="{{ product.imgLink }}"
@@ -53,8 +74,8 @@
   </div>
 </div>
 <!-- PHONE -->
-<div *ngIf="products" class="container phone-catalog">
-  <table mat-table [dataSource]="products">
+<div *ngIf="filteredProducts" class="container phone-catalog">
+  <table mat-table [dataSource]="filteredProducts">
     <ng-container matColumnDef="imgLink">
       <th mat-header-cell *matHeaderCellDef></th>
       <td

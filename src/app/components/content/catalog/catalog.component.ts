@@ -19,7 +19,8 @@ export class CatalogComponent implements OnInit, AfterViewInit {
   public bannerImg: string = BannerImages.BANNER_IMG_CATALOG;
   public type: string = 'CATALOG';
 
-  public products: Array<Product> = new Array<Product>();
+  private allProducts: Array<Product> = new Array<Product>();
+  public filteredProducts: Product[] = new Array<Product>();
   public displayedColumns: string[] = ['imgLink', 'description', 'options'];
 
   constructor(
@@ -30,7 +31,8 @@ export class CatalogComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.service.getAllProducts().subscribe((response) => {
-      this.products = response.sort((a, b) => (a.order < b.order ? -1 : 1));
+      this.allProducts = response.sort((a, b) => (a.order < b.order ? -1 : 1));
+      this.filteredProducts = this.allProducts;
     });
   }
 
@@ -38,7 +40,31 @@ export class CatalogComponent implements OnInit, AfterViewInit {
     this.cdr.detectChanges();
   }
 
-  openPlayOrBuyDialog(product: Product): void {
+  public applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.filteredProducts = this.allProducts.filter(
+      (product) =>
+        product.name
+          .trim()
+          .toLocaleLowerCase()
+          .includes(filterValue.trim().toLocaleLowerCase()) ||
+        product.description
+          .trim()
+          .toLocaleLowerCase()
+          .includes(filterValue.trim().toLocaleLowerCase()) ||
+        product.type
+          .trim()
+          .toLocaleLowerCase()
+          .includes(filterValue.trim().toLocaleLowerCase()) ||
+        product.date
+          .toString()
+          .trim()
+          .toLocaleLowerCase()
+          .includes(filterValue.trim().toLocaleLowerCase())
+    );
+  }
+
+  public openPlayOrBuyDialog(product: Product): void {
     this.dialog.open(PlayOrBuyComponent, {
       data: { pageValue: product },
       autoFocus: false,
