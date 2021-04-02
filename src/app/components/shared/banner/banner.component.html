@@ -159,15 +159,12 @@
           </li>
           <li
             class="list-inline-item"
-            *ngIf="
-              type.toUpperCase() === 'GALLERY' || type.toUpperCase() === 'ABOUT'
-            "
           >
             <a
               rel="external nofollow"
               target="_blank"
               class="btn-floating btn-gplus mx-3"
-              (click)="openArtDialog()"
+              (click)="openInfoDialog()"
             >
               <img
                 [ngClass]="{

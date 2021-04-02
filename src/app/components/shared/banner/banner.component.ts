@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { GlobalConstants } from 'src/app/common/global-constants';
 import { ArtModalComponent } from 'src/app/modals/art-modal/art-modal.component';
+import { ContactModalComponent } from 'src/app/modals/contact-modal/contact-modal.component';
+import { ProductionModalComponent } from 'src/app/modals/production-modal/production-modal.component';
 
 @Component({
   selector: 'app-banner',
@@ -24,9 +26,38 @@ export class BannerComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  public openArtDialog(): void {
+  public openInfoDialog(): void {
+    switch (this.type.toUpperCase()) {
+      case 'CATALOG':
+        this.openProductionDialog();
+        return;
+      case 'GALLERY':
+        this.openArtDialog();
+        return;
+      case 'ABOUT':
+        this.openContactDialog();
+        return;
+      case 'LYRICS':
+        this.openContactDialog();
+        return;
+    }
+  }
+
+  private openArtDialog(): void {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.autoFocus = false;
     this.dialog.open(ArtModalComponent, dialogConfig);
+  }
+
+  private openProductionDialog(): void {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.autoFocus = false;
+    this.dialog.open(ProductionModalComponent, dialogConfig);
+  }
+
+  private openContactDialog(): void {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.autoFocus = false;
+    this.dialog.open(ContactModalComponent, dialogConfig);
   }
 }
