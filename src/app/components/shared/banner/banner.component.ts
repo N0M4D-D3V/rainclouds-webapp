@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { GlobalConstants } from 'src/app/common/global-constants';
-import { ArtModalComponent } from 'src/app/modals/art-modal/art-modal.component';
-import { ContactModalComponent } from 'src/app/modals/contact-modal/contact-modal.component';
-import { ProductionModalComponent } from 'src/app/modals/production-modal/production-modal.component';
+import { ArtModalComponent } from 'src/app/components/shared/modals/art-modal/art-modal.component';
+import { ContactModalComponent } from 'src/app/components/shared/modals/contact-modal/contact-modal.component';
+import { ProductionModalComponent } from 'src/app/components/shared/modals/production-modal/production-modal.component';
 
 @Component({
   selector: 'app-banner',

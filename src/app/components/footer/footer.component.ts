@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalConstants } from '../../common/global-constants';
-import { ContactService } from '../../services/contact.service';
 
 @Component({
   selector: 'app-footer',
@@ -18,7 +17,7 @@ export class FooterComponent implements OnInit {
   public spotify: string = GlobalConstants.SPOTIFY_URL;
   public twitter: string = GlobalConstants.TWITTER_URL;
 
-  constructor(private contactService: ContactService) {}
+  constructor() {}
 
   ngOnInit() {}
 }

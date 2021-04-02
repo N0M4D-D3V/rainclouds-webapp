@@ -1,0 +1,90 @@
+<button mat-icon-button class="close-button float-right" [mat-dialog-close]="true">
+    <mat-icon class="close-icon" color="warn">close</mat-icon>
+</button>
+  <div class="mt-5">
+  
+    <h1 mat-dialog-title>Send an Email</h1>
+    <mat-dialog-content>
+        <form #contactForm="ngForm" class="text-center m-2">
+          <!-- name -->
+          <div class="field m-2">
+            <input
+              type="text"
+              name="name"
+              class="form-control bg-dark text-white text-center"
+              placeholder="Name"
+              [(ngModel)]="contact.name"
+              required
+              minlength="3"
+              #nameInput="ngModel"
+            />
+    
+            <div
+              *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)"
+              class="alert alert-danger small p-0 m-1"
+            >
+              <div *ngIf="nameInput.errors?.required">Name is required.</div>
+              <div *ngIf="nameInput.errors?.minlength">
+                Name must be at least 3 characters long.
+              </div>
+            </div>
+          </div>
+    
+          <!-- email -->
+          <div class="field m-2">
+            <input
+              type="email"
+              name="email"
+              class="form-control bg-dark text-white text-center"
+              placeholder="Email"
+              [(ngModel)]="contact.email"
+              required
+              email
+              #emailInput="ngModel"
+            />
+            <div
+              *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)"
+              class="alert alert-danger small p-0 m-1"
+            >
+              <div *ngIf="emailInput.errors?.required">Email is required.</div>
+              <div *ngIf="emailInput.errors?.email">
+                Your email not have a correct format.
+              </div>
+            </div>
+          </div>
+    
+          <!-- message -->
+          <div class="field m-2">
+            <textarea
+              class="form-control bg-dark text-white text-center"
+              name="message"
+              placeholder="What's on your mind?"
+              [(ngModel)]="contact.message"
+              required
+              #messageInput="ngModel"
+            ></textarea>
+            <div
+              *ngIf="
+                messageInput.invalid && (messageInput.dirty || messageInput.touched)
+              "
+              class="alert alert-danger small p-0 m-1"
+            >
+              <div *ngIf="messageInput.errors?.required">
+                You forgot the message!
+              </div>
+            </div>
+          </div>
+    
+          <button
+            [mat-dialog-close]="true"
+            role="button"
+            class="btn btn-warning text-center"
+            (click)="processForm()"
+            [disabled]="!contactForm.form.valid"
+          >
+            Send
+          </button>
+        </form>
+      </mat-dialog-content>
+  </div>
+  

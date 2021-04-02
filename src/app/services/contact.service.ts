@@ -8,7 +8,7 @@ import { Contact, ContactResponse } from '../interfaces/contact';
   providedIn: 'root',
 })
 export class ContactService {
-  private endpoint: string = 'https://formspree.io/f/xleovgjn';
+  private endpoint: string = 'https://formspree.io/f/mpzkzzep';
   private headers = new HttpHeaders({
     'Content-Type': 'application/json',
   });

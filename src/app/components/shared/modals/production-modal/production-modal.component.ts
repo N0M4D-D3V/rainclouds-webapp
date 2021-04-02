@@ -1,11 +1,10 @@
-
-import { Component, OnInit } from "@angular/core";
-import { GlobalConstants } from "../../common/global-constants";
+import { Component, OnInit } from '@angular/core';
+import { GlobalConstants } from 'src/app/common/global-constants';
 
 @Component({
-  selector: "app-production",
-  templateUrl: "./production-modal.component.html",
-  styleUrls: ["./production-modal.component.scss"],
+  selector: 'app-production',
+  templateUrl: './production-modal.component.html',
+  styleUrls: ['./production-modal.component.scss'],
 })
 export class ProductionModalComponent implements OnInit {
   //wildcrow

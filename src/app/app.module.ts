@@ -26,11 +26,12 @@ import { environment } from '../environments/environment.prod';
 import { FilterPipe } from './common/pipes/search.pipe';
 
 //MODALS
-import { ArtModalComponent } from './modals/art-modal/art-modal.component';
-import { ContactModalComponent } from './modals/contact-modal/contact-modal.component';
-import { MusicModalComponent } from './modals/music-modal/music-modal.component';
-import { PlayOrBuyComponent } from './modals/play-or-buy/play-or-buy.component';
-import { ProductionModalComponent } from './modals/production-modal/production-modal.component';
+import { ArtModalComponent } from './components/shared/modals/art-modal/art-modal.component';
+import { ContactModalComponent } from './components/shared/modals/contact-modal/contact-modal.component';
+import { MusicModalComponent } from './components/shared/modals/music-modal/music-modal.component';
+import { PlayOrBuyComponent } from './components/shared/modals/play-or-buy/play-or-buy.component';
+import { ProductionModalComponent } from './components/shared/modals/production-modal/production-modal.component';
+import { MailModalComponent } from './components/shared/modals/mail-modal/mail-modal.component';
 
 //COMPONENTS
 import { HeaderComponent } from './components/header/header.component';
@@ -41,8 +42,7 @@ import { HomeComponent } from './components/content/home/home.component';
 import { AboutComponent } from './components/content/about/about.component';
 import { LyricsComponent } from './components/content/lyrics/lyrics.component';
 import { BannerComponent } from './components/shared/banner/banner.component';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -53,6 +53,7 @@ import { HttpClientModule } from '@angular/common/http';
     MusicModalComponent,
     PlayOrBuyComponent,
     ProductionModalComponent,
+    MailModalComponent,
     HeaderComponent,
     FooterComponent,
     CatalogComponent,
@@ -76,7 +77,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatInputModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [NgbCarouselConfig],
   bootstrap: [AppComponent],
@@ -86,6 +87,7 @@ import { HttpClientModule } from '@angular/common/http';
     MusicModalComponent,
     PlayOrBuyComponent,
     ProductionModalComponent,
+    MailModalComponent,
   ],
 })
 export class AppModule {}

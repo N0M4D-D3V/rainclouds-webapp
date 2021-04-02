@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { GlobalConstants } from '../../../common/global-constants';
+import { MailModalComponent } from '../../shared/modals/mail-modal/mail-modal.component';
 
 @Component({
   selector: 'app-about',
@@ -18,7 +20,13 @@ export class AboutComponent implements OnInit {
   public darkVoidStudiosWeb: string = GlobalConstants.DARK_VOID_STUDIOS_WEB;
   public wildCrowStudiosFacebook: string = GlobalConstants.WILDCROW_STUDIOS_FACEBOOK
 
-  constructor() {}
+  constructor(private dialog: MatDialog) {}
 
   ngOnInit(): void {}
+
+  public openMailDialog(): void {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.autoFocus = false;
+    this.dialog.open(MailModalComponent, dialogConfig);
+  }
 }
