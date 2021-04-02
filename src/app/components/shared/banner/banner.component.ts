@@ -11,6 +11,7 @@ import { ArtModalComponent } from 'src/app/modals/art-modal/art-modal.component'
 export class BannerComponent implements OnInit {
   @Input() type: string;
   @Input() imageSrc: string;
+  @Input() invert?: boolean = false;
 
   public youtube: string = GlobalConstants.YOUTUBE_URL;
   public spotify: string = GlobalConstants.SPOTIFY_URL;

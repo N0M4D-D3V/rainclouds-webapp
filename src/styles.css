@@ -34,6 +34,10 @@ p {
   font-family: "Rooters", Arial, Helvetica, sans-serif !important;
 }
 
+.invert-color {
+  filter: invert(1);
+}
+
 @media screen and (min-width: 600px) {
   .hover-animation {
     transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s,

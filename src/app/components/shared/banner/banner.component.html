@@ -2,7 +2,6 @@
   <div class="card bg-dark text-white text-center">
     <img class="card-img banner-img" src="{{ imageSrc }}" alt="listen to us" />
 
-    <!-- MUSIC -->
     <div class="card-img-overlay">
       <h1
         class="card-title banner-title"
@@ -38,6 +37,9 @@
               href="{{ facebook }}"
             >
               <img
+                [ngClass]="{
+                  'invert-color': invert
+                }"
                 class="hover-animation"
                 src="assets/images/facebook.png"
                 width="25"
@@ -58,6 +60,9 @@
               href="{{ instagram }}"
             >
               <img
+                [ngClass]="{
+                  'invert-color': invert
+                }"
                 class="hover-animation"
                 src="assets/images/instagram.png"
                 width="25"
@@ -73,6 +78,9 @@
               href="{{ twitter }}"
             >
               <img
+                [ngClass]="{
+                  'invert-color': invert
+                }"
                 class="hover-animation"
                 src="assets/images/twitter.png"
                 width="25"
@@ -93,6 +101,9 @@
               href="{{ youtube }}"
             >
               <img
+                [ngClass]="{
+                  'invert-color': invert
+                }"
                 class="hover-animation"
                 src="assets/images/youtube.png"
                 width="25"
@@ -113,6 +124,9 @@
               href="{{ spotify }}"
             >
               <img
+                [ngClass]="{
+                  'invert-color': invert
+                }"
                 class="hover-animation"
                 src="assets/images/spotify.png"
                 width="25"
@@ -133,6 +147,9 @@
               href="{{ bandcamp }}"
             >
               <img
+                [ngClass]="{
+                  'invert-color': invert
+                }"
                 class="hover-animation"
                 src="assets/images/bandcamp.png"
                 width="25"
@@ -153,6 +170,9 @@
               (click)="openArtDialog()"
             >
               <img
+                [ngClass]="{
+                  'invert-color': invert
+                }"
                 class="hover-animation"
                 src="assets/images/info-button.png"
                 width="25"

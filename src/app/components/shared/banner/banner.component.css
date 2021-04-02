@@ -1,27 +1,31 @@
 @keyframes opacity_transition {
-    0% {filter: opacity(100%);}
-    100% {filter: opacity(60%);}
+  0% {
+    filter: opacity(100%);
   }
-
-.banner-title{
-    font-size: 6em;
-    animation: backInLeft;
-    animation-duration: 4s;
+  100% {
+    filter: opacity(60%);
+  }
 }
 
-.banner-text{
-    font-style: italic;
-    animation: backInRight;
-    animation-duration: 4s;
+.banner-title {
+  font-size: 6em;
+  animation: backInLeft;
+  animation-duration: 4s;
+}
+
+.banner-text {
+  font-style: italic;
+  animation: backInRight;
+  animation-duration: 4s;
 }
 
 .banner-img {
-    width: 100%;
-    height:200px; 
-    margin: 0 auto;
-    object-fit: cover;
+  width: 100%;
+  height: 200px;
+  margin: 0 auto;
+  object-fit: cover;
 
-    animation-name: opacity_transition;
-    animation-duration: 4s;
-    animation-fill-mode: forwards;
+  animation-name: opacity_transition;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
 }
