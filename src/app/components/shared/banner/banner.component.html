@@ -1,4 +1,4 @@
-<div class="web-catalog">
+<div class="web">
   <div class="card bg-dark text-white text-center">
     <img class="card-img banner-img" src="{{ imageSrc }}" alt="listen to us" />
 
@@ -157,9 +157,7 @@
               />
             </a>
           </li>
-          <li
-            class="list-inline-item"
-          >
+          <li class="list-inline-item">
             <a
               rel="external nofollow"
               target="_blank"
@@ -181,4 +179,82 @@
       </div>
     </div>
   </div>
+</div>
+
+<!-- PHONE -->
+<div class="phone mt-5 banner-text">
+  <ul class="list-unstyled list-inline text-center">
+    <li class="list-inline-item">
+      <a
+        rel="external nofollow"
+        target="_blank"
+        class="btn-floating btn-gplus mx-3"
+        href="{{ youtube }}"
+      >
+        <img
+          [ngClass]="{
+            'invert-color': invert
+          }"
+          class="hover-animation"
+          src="assets/images/youtube.png"
+          width="50"
+          alt="razak youtube"
+        />
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a
+        rel="external nofollow"
+        target="_blank"
+        class="btn-floating btn-gplus mx-3"
+        href="{{ spotify }}"
+      >
+        <img
+          [ngClass]="{
+            'invert-color': invert
+          }"
+          class="hover-animation"
+          src="assets/images/spotify.png"
+          width="50"
+          alt="razak spotify"
+        />
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a
+        rel="external nofollow"
+        target="_blank"
+        class="btn-floating btn-li mx-3"
+        href="{{ bandcamp }}"
+      >
+        <img
+          [ngClass]="{
+            'invert-color': invert
+          }"
+          class="hover-animation"
+          src="assets/images/bandcamp.png"
+          width="50"
+          alt="razak bandcamp"
+        />
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a
+        rel="external nofollow"
+        target="_blank"
+        class="btn-floating btn-gplus mx-3"
+        (click)="openInfoDialog()"
+      >
+        <img
+          [ngClass]="{
+            'invert-color': invert
+          }"
+          class="hover-animation"
+          src="assets/images/info-button.png"
+          width="50"
+          alt="razak info button"
+        />
+      </a>
+    </li>
+  </ul>
 </div>

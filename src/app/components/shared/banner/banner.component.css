@@ -7,6 +7,14 @@
   }
 }
 
+.phone {
+  display: none;
+}
+
+.web {
+  display: block;
+}
+
 .banner-title {
   font-size: 6em;
   animation: backInLeft;
@@ -28,4 +36,14 @@
   animation-name: opacity_transition;
   animation-duration: 4s;
   animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 600px) {
+  .phone {
+    display: block;
+  }
+
+  .web {
+    display: none;
+  }
 }
