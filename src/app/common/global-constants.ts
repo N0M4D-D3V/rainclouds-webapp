@@ -42,3 +42,10 @@ export class GlobalConstants {
   public static VICTOR_DEVELOPS_LINKEDIN: string =
     'https://www.linkedin.com/in/víctor-develops/';
 }
+
+export class BannerImages {
+  public static BANNER_IMG_CATALOG: string = 'https://imgur.com/HS1SQYJ.jpg';
+  public static BANNER_IMG_GALLERY: string = 'https://imgur.com/VvyKjio.jpg';
+  public static BANNER_IMG_LYRICS: string = '';
+  public static BANNER_IMG_ABOUT: string = '';
+}

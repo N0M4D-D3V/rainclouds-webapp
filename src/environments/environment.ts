@@ -9,7 +9,6 @@ export const environment = {
     authDomain: "razak-bm-web.firebaseapp.com",
     databaseURL: "https://razak-bm-web.firebaseio.com",
     projectId: "razak-bm-web",
-    storageBucket: "razak-bm-web.appspot.com",
     messagingSenderId: "277733915797",
     appId: "1:277733915797:web:b9d65d261e599077f3ef9c",
     measurementId: "G-JK8TPXWK01"

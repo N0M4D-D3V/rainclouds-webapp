@@ -1,0 +1,28 @@
+iframe {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.card-title {
+  font-size: 2em;
+}
+
+.card {
+  display: inline-block;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.mat-form-field {
+  font-size: 20px !important;
+  width: 33% !important;
+}

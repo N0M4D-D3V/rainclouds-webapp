@@ -7,5 +7,9 @@
         ]
       }
     }
+  },
+  "projects": {
+    "prod": "razak-bm-web",
+    "default": "razak-bm-web"
   }
 }
