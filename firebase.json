@@ -2,7 +2,7 @@
   "hosting": [
     {
       "target": "rainclouds-webapp",
-      "public": "dist\\rainclouds-webapp\\dist\\rainclouds-webapp\\browser",
+      "public": "dist\\rainclouds-webapp\\browser",
       "ignore": [
         "**/.*"
       ],
@@ -26,6 +26,7 @@
     }
   ],
   "functions": {
-    "source": "dist/rainclouds-webapp"
+    "source": "functions",
+    "predeploy": "npm --prefix \"$RESOURCE_DIR\" run build"
   }
 }
