@@ -8,7 +8,7 @@ import { ProductionModalComponent } from 'src/app/components/shared/modals/produ
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
-  styleUrls: ['./banner.component.css'],
+  styleUrls: ['./banner.component.scss'],
 })
 export class BannerComponent implements OnInit {
   @Input() type: string;

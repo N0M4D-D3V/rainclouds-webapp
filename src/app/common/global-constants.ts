@@ -7,7 +7,8 @@ export class GlobalConstants {
     'https://www.facebook.com/RazakBlackMetal';
   public static INSTAGRAM_URL: string =
     'https://www.instagram.com/razakblackmetal/';
-  public static SPOTIFY_URL: string = '#';
+  public static SPOTIFY_URL: string =
+    'https://open.spotify.com/album/273RY8soiInHufMxhtXlTj?si=uGrDUrSoS4K6nRXJ_c0bow&utm_source=copy-link';
   public static TWITTER_URL: string = 'https://twitter.com/RazakBlackMetal';
 
   //Alvaro
