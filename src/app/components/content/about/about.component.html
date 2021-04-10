@@ -1,44 +1,37 @@
 <app-banner [imageSrc]="bannerImg" [type]="type" [invert]="true"></app-banner>
 
-<div class="container">
-  <!-- INTRODUCE -->
-  <div class="row mt-3 mb-3">
-    <img
-      src="assets/images/razak_logo.png"
-      alt="razak black metal logo"
-      class="col-6"
-    />
-    <div class="card col-6">
-      <div class="card-body">
-        <h1 class="card-title">RazaK</h1>
-        <hr />
-        <h6 class="card-subtitle mb-3 text-muted">About the band</h6>
-        <div class="card-text">
+<!-- INTRODUCE -->
+<div class="mt-3 mb-3">
+  <div class="card" style="height: 500px">
+    <div class="card-body">
+      <h1 class="card-title text-center">RazaK</h1>
+      <hr />
+      <h6 class="card-subtitle mb-3 text-muted text-center">About the band</h6>
+      <div class="card-text">
+        <div class="container text-center">
           <p>
             Atmospheric/Melodic/Post Black Metal band from Spain. It was formed
-            in 2019 by Exar Kun (guitars) and Banshee (vocals).
+            in 2019 by Exar Kun (guitars) and Banshee (vocals). The band's name
+            comes from Eragon book series. In them, appear some creatures with
+            named 'Ra'zac'. The book describes them like this:
           </p>
-          <p>
-            The name of the band comes from Eragon book series.In them, appear
-            some creatures with named 'Ra'zac'. The book describes them like
-            this:
-          </p>
-          <p class="text-center text-muted ml-1 mr-1">
+          <br />
+          <p class="text-center text-muted ml-1 mr-1 font-italic">
             "They are the monsters in the dark, the dripping nightmares that
             haunt your race..."
           </p>
+          <ul class="list-unstyled list-inline text-center">
+            <li class="list-inline-item">
+              <img
+                width="350"
+                class="hover-animation"
+                src="assets/images/razak_logo.png"
+                alt="razak black metal logo"
+                (click)="openMailDialog()"
+              />
+            </li>
+          </ul>
         </div>
-        <ul class="list-unstyled list-inline text-center">
-          <li class="list-inline-item">
-            <button
-              role="button"
-              class="btn btn-danger text-center"
-              (click)="openMailDialog()"
-            >
-              Contact
-            </button>
-          </li>
-        </ul>
       </div>
     </div>
   </div>
@@ -179,7 +172,7 @@
 
 <!-- WEB DEVELOPMENT -->
 <div class="mt-3 mb-3">
-  <div class="card" style="height: 500px;">
+  <div class="card" style="height: 500px">
     <div class="card-body">
       <h1 class="card-title text-center">Web Development</h1>
       <hr />
@@ -190,10 +183,9 @@
         <p>
           This web was created by Victor Develops. He is a professional
           web/mobile developer from Spain. He usually works for Start-Ups and
-          big companies.
-
-          He has his own projects too and is working with Banshee in Dark Void
-          Studios web development. You can find his linkedin profile here:
+          big companies. He has his own projects too and is working with Banshee
+          in Dark Void Studios web development. You can find his linkedin
+          profile here:
         </p>
         <ul class="list-unstyled list-inline text-center">
           <li class="list-inline-item">
