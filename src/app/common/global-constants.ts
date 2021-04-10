@@ -47,8 +47,8 @@ export class GlobalConstants {
 }
 
 export class BannerImages {
-  public static BANNER_IMG_CATALOG: string = 'https://imgur.com/HS1SQYJ.jpg';
-  public static BANNER_IMG_GALLERY: string = 'https://imgur.com/VvyKjio.jpg';
-  public static BANNER_IMG_LYRICS: string = '';
-  public static BANNER_IMG_ABOUT: string = '';
+  public static BANNER_IMG_CATALOG: string = 'https://imgur.com/5GTM4HM.jpg';
+  public static BANNER_IMG_GALLERY: string = 'https://imgur.com/f8cNq6P.jpg';
+  public static BANNER_IMG_LYRICS: string = 'https://imgur.com/FzjMOid.jpg';
+  public static BANNER_IMG_ABOUT: string = 'https://imgur.com/HhILCqE.jpg';
 }

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { GlobalConstants } from '../../../common/global-constants';
+import {
+  GlobalConstants,
+  BannerImages,
+} from '../../../common/global-constants';
 import { MailModalComponent } from '../../shared/modals/mail-modal/mail-modal.component';
 
 @Component({
@@ -10,15 +13,17 @@ import { MailModalComponent } from '../../shared/modals/mail-modal/mail-modal.co
 })
 export class AboutComponent implements OnInit {
   public type: string = 'about';
-  public bannerImg: string = 'https://imgur.com/hjnmdpU.jpg';
+  public bannerImg: string = BannerImages.BANNER_IMG_ABOUT;
 
   //links
   public steelWitchInstagram: string = GlobalConstants.STEEL_WITCH_INSTAGRAM;
   public alvaroGomezFacebook: string = GlobalConstants.ALVARO_GOMEZ_FACEBOOK;
   public alvaroGomezInstagram: string = GlobalConstants.ALVARO_GOMEZ_INSTAGRAM;
-  public victorDevelopsLinkedin: string = GlobalConstants.VICTOR_DEVELOPS_LINKEDIN;
+  public victorDevelopsLinkedin: string =
+    GlobalConstants.VICTOR_DEVELOPS_LINKEDIN;
   public darkVoidStudiosWeb: string = GlobalConstants.DARK_VOID_STUDIOS_WEB;
-  public wildCrowStudiosFacebook: string = GlobalConstants.WILDCROW_STUDIOS_FACEBOOK
+  public wildCrowStudiosFacebook: string =
+    GlobalConstants.WILDCROW_STUDIOS_FACEBOOK;
 
   constructor(private dialog: MatDialog) {}
 
