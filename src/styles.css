@@ -16,6 +16,7 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color:whitesmoke;
 }
 
 h1,
@@ -53,6 +54,7 @@ p {
   }
 
   .hover-animation:hover {
+    cursor: pointer;
     transform: scale(1.2);
   }
 

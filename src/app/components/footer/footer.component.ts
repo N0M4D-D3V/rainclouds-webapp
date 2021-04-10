@@ -17,6 +17,8 @@ export class FooterComponent implements OnInit {
   public spotify: string = GlobalConstants.SPOTIFY_URL;
   public twitter: string = GlobalConstants.TWITTER_URL;
 
+  public webVersion: string = GlobalConstants.WEB_VERSION;
+
   constructor() {}
 
   ngOnInit() {}

@@ -1,4 +1,6 @@
 export class GlobalConstants {
+  public static WEB_VERSION: string = '2.0.1';
+
   //RAZAK
   public static YOUTUBE_URL: string =
     'https://www.youtube.com/channel/UCc2fnz8ZQ-9yGqxyI6y91MQ';
@@ -7,7 +9,8 @@ export class GlobalConstants {
     'https://www.facebook.com/RazakBlackMetal';
   public static INSTAGRAM_URL: string =
     'https://www.instagram.com/razakblackmetal/';
-  public static SPOTIFY_URL: string = '#';
+  public static SPOTIFY_URL: string =
+    'https://open.spotify.com/album/273RY8soiInHufMxhtXlTj?si=uGrDUrSoS4K6nRXJ_c0bow&utm_source=copy-link';
   public static TWITTER_URL: string = 'https://twitter.com/RazakBlackMetal';
 
   //Alvaro
@@ -44,8 +47,8 @@ export class GlobalConstants {
 }
 
 export class BannerImages {
-  public static BANNER_IMG_CATALOG: string = 'https://imgur.com/HS1SQYJ.jpg';
-  public static BANNER_IMG_GALLERY: string = 'https://imgur.com/VvyKjio.jpg';
-  public static BANNER_IMG_LYRICS: string = '';
-  public static BANNER_IMG_ABOUT: string = '';
+  public static BANNER_IMG_CATALOG: string = 'https://imgur.com/5GTM4HM.jpg';
+  public static BANNER_IMG_GALLERY: string = 'https://imgur.com/f8cNq6P.jpg';
+  public static BANNER_IMG_LYRICS: string = 'https://imgur.com/FzjMOid.jpg';
+  public static BANNER_IMG_ABOUT: string = 'https://imgur.com/HhILCqE.jpg';
 }

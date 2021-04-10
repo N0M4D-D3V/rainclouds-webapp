@@ -14,7 +14,7 @@ import { LyricService } from 'src/app/services/lyric.service';
   styleUrls: ['./lyrics.component.scss'],
 })
 export class LyricsComponent implements OnInit, AfterViewInit {
-  public bannerImg: string = BannerImages.BANNER_IMG_CATALOG;
+  public bannerImg: string = BannerImages.BANNER_IMG_LYRICS;
   public type: string = 'LYRICS';
 
   private allLyrics: Lyric[] = new Array<Lyric>();

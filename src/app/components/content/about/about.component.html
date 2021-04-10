@@ -1,99 +1,146 @@
 <app-banner [imageSrc]="bannerImg" [type]="type" [invert]="true"></app-banner>
 
-<div class="container">
-  <!-- INTRODUCE -->
-  <div class="row mt-3 mb-3">
-    <img
-      src="assets/images/razak_logo.png"
-      alt="razak black metal logo"
-      class="col-6"
-    />
-    <div class="card col-6">
-      <div class="card-body">
-        <h1 class="card-title">RazaK</h1>
-        <hr />
-        <h6 class="card-subtitle mb-3 text-muted">About the band</h6>
-        <div class="card-text">
+<!-- INTRODUCE -->
+<div>
+  <div class="card" style="height: 700px;">
+    <div class="card-body">
+      <h1 class="card-title text-center">RazaK</h1>
+      <hr />
+      <h6 class="card-subtitle mb-3 text-muted text-center">About the band</h6>
+      <div class="card-text">
+        <div class="container text-center">
           <p>
             Atmospheric/Melodic/Post Black Metal band from Spain. It was formed
-            in 2019 by Exar Kun (guitars) and Banshee (vocals).
+            in 2019 by Exar Kun (guitars) and Banshee (vocals). The band's name
+            comes from Eragon book series. In them, appear some creatures with
+            named 'Ra'zac'. The book describes them like this:
           </p>
-          <p>
-            The name of the band comes from Eragon book series.In them, appear
-            some creatures with named 'Ra'zac'. The book describes them like
-            this:
-          </p>
-          <p class="text-center text-muted ml-1 mr-1">
+          <br />
+          <p class="text-center text-muted ml-1 mr-1 font-italic">
             "They are the monsters in the dark, the dripping nightmares that
             haunt your race..."
           </p>
+          <ul class="list-unstyled list-inline text-center">
+            <li class="list-inline-item">
+              <img
+                width="550"
+                class="hover-animation"
+                src="assets/images/razak_logo.png"
+                alt="razak black metal logo"
+                (click)="openMailDialog()"
+              />
+            </li>
+          </ul>
         </div>
+      </div>
+    </div>
+  </div>
+
+<!-- RECORDS -->
+<div class="card bg-dark text-white text-center">
+  <img
+    class="card-img art-img"
+    src="https://cdn.pixabay.com/photo/2016/11/21/12/59/vinyl-1845272_960_720.jpg"
+    alt="Dark Void Studios Wildcrow Studios Recording Mastering"
+  />
+  <div class="card-img-overlay">
+    <h1 class="card-title">Recording</h1>
+    <hr />
+    <h6 class="card-subtitle mb-4 text-muted">
+      About Dark Void Studios and Wildcrow Studios
+    </h6>
+    <div class="row center">
+      <div class="col-6 mt-5 p-5">
+        <h2>Dark Void Studios</h2>
+        <p>
+          Banshee has a home studio named Dark Void Studios. All releases are
+          recorded and produced there. We use the best software and hardware we
+          could find for make our music better.
+        </p>
         <ul class="list-unstyled list-inline text-center">
           <li class="list-inline-item">
-            <button
-              role="button"
-              class="btn btn-danger text-center"
-              (click)="openMailDialog()"
+            <a
+              href="{{ darkVoidStudiosWeb }}"
+              rel="external nofollow"
+              target="_blank"
+              class="btn-floating btn-gplus mx-3"
             >
-              Contact
-            </button>
+              <img
+                class="hover-animation"
+                src="assets/images/darkvoidstudio_logo.png"
+                alt="dark void studios logo"
+                width="150"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-6 mt-5 p-5">
+        <h2>Wildcrow Studios</h2>
+        <p>
+          Wildcrow Studios is where bands like Uten Hap or Wintercrown make
+          their records. The men behind this is called Wildcrow, a trve
+          norwegian black metal lover. Wildcrow takes care of the themes
+          mastering.
+        </p>
+        <ul class="list-unstyled list-inline text-center">
+          <li class="list-inline-item">
+            <a
+              href="{{ wildCrowStudiosFacebook }}"
+              rel="external nofollow"
+              target="_blank"
+              class="btn-floating btn-gplus mx-3"
+            >
+              <img
+                class="hover-animation"
+                src="assets/images/wildcrowstudios_inverse.png"
+                alt="dark void studios logo"
+                width="100"
+              />
+            </a>
           </li>
         </ul>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- RECORDS -->
-  <div class="row mt-3 mb-3">
-    <div class="card col-6">
-      <div class="card-body">
-        <h1 class="card-title">Recording</h1>
-        <hr />
-        <h6 class="card-subtitle mb-3 text-muted">
-          About Dark Void Studios and Wildcrow Studios
-        </h6>
-        <div class="card-text">
-          <p>
-            Banshee has a home studio named Dark Void Studios. All releases are
-            recorded and produced there. We use the best software and hardware
-            we could find for make our music better.
-          </p>
-          <p>
-            Wildcrow Studios is where bands like Uten Hap or Wintercrown make
-            their records. The men behind this is called Wildcrow, a trve
-            norwegian black metal lover. Wildcrow takes care of the themes
-            mastering.
-          </p>
-        </div>
+<!-- WEB DEVELOPMENT -->
+<div>
+  <div class="card" style="height: 500px">
+    <div class="card-body">
+      <h1 class="card-title text-center">Web Development</h1>
+      <hr />
+      <h6 class="card-subtitle mb-3 text-muted text-center">
+        About Victor Develops
+      </h6>
+      <div class="card-text text-center container">
+        <p>
+          This web was created by Victor Develops. He is a professional
+          web/mobile developer from Spain. He usually works for Start-Ups and
+          big companies. He has his own projects too and is working with Banshee
+          in Dark Void Studios web development. You can find his linkedin
+          profile here:
+        </p>
         <ul class="list-unstyled list-inline text-center">
           <li class="list-inline-item">
-            <a href="{{ darkVoidStudiosWeb }}" class="card-link">
+            <a
+              rel="external nofollow"
+              target="_blank"
+              class="btn-floating btn-gplus mx-3"
+              href="{{ victorDevelopsLinkedin }}"
+            >
               <img
                 class="hover-animation"
-                src="assets/images/darkvoidstudio_logo.png"
-                alt="dark void studios logo"
-                width="50"
-              />
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="{{ wildCrowStudiosFacebook }}" class="card-link">
-              <img
-                class="hover-animation"
-                src="assets/images/wildcrowstudios_inverse.png"
-                alt="dark void studios logo"
-                width="50"
+                src="assets/images/victordevelops_logo.png"
+                width="230"
+                alt="steel witch instagram"
               />
             </a>
           </li>
         </ul>
       </div>
     </div>
-    <img
-      src="https://cdn.pixabay.com/photo/2016/11/21/12/59/electronics-1845272_960_720.jpg"
-      alt="razak black metal logo"
-      class="col-6"
-    />
   </div>
 </div>
 
@@ -102,7 +149,7 @@
   <img
     class="card-img art-img"
     src="https://cdn.pixabay.com/photo/2016/07/22/16/29/fog-1535201_960_720.jpg"
-    alt="main gif"
+    alt="Steel Witch Alvaro Gomez Artwork Razak"
   />
   <div class="card-img-overlay">
     <h1 class="card-title text-dark">Art</h1>
@@ -127,7 +174,7 @@
               <img
                 class="hover-animation"
                 src="assets/images/facebook.png"
-                width="50"
+                width="100"
                 alt="alvaro gomez facebook"
               />
             </a>
@@ -142,7 +189,7 @@
               <img
                 class="hover-animation"
                 src="assets/images/instagram.png"
-                width="50"
+                width="100"
                 alt="alvaro gomez instagram"
               />
             </a>
@@ -166,7 +213,7 @@
               <img
                 class="hover-animation invert-color"
                 src="assets/images/instagram.png"
-                width="50"
+                width="100"
                 alt="steel witch instagram"
               />
             </a>
@@ -177,58 +224,15 @@
   </div>
 </div>
 
-<div class="container">
-  <!-- WEB DEVELOPMENT -->
-  <div class="row mt-3 mb-3">
-    <img
-      src="assets/images/victordevelops_logo.png"
-      alt="victor web development logo"
-      class="col-6"
-    />
-    <div class="card col-6">
-      <div class="card-body">
-        <h1 class="card-title">Web Development</h1>
-        <hr />
-        <h6 class="card-subtitle mb-3 text-muted">About Victor Develops</h6>
-        <div class="card-text">
-          <p>
-            This web was created by Victor Develops. He is a professional
-            web/mobile developer from Spain. He usually works for Start-Ups and
-            big companies.
-          </p>
-          <p>
-            He has his own projects too and is working with Banshee in Dark Void
-            Studios web development. You can find his linkedin profile here:
-          </p>
-          <ul class="list-unstyled list-inline text-center">
-            <li class="list-inline-item">
-              <a
-                rel="external nofollow"
-                target="_blank"
-                class="btn-floating btn-gplus mx-3"
-                href="{{ victorDevelopsLinkedin }}"
-              >
-                <img
-                  class="hover-animation"
-                  src="assets/images/linkedin.png"
-                  width="50"
-                  alt="steel witch instagram"
-                />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- INFLUENCES -->
 <div class="card bg-dark text-white text-center">
   <img
     class="card-img art-img"
     src="https://cdn.pixabay.com/photo/2019/07/02/11/18/crowd-4312230_960_720.jpg"
-    alt="main gif"
+    alt="Psychonaut4, Thy Light, Oathbreaker, Behemoth, Happy Days, Cradle Of
+    Filth, A Light In The Dark, Lustre, Burzum, Darkthrone, Death, Slayer,
+    Morbid Angel, Carach Angren, Valefor, Silencer, Veil, Mayhem, Bathory,
+    Venom, Bleak"
   />
   <div class="card-img-overlay">
     <h1 class="card-title text-dark">Influences</h1>
