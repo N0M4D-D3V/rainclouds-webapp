@@ -1,5 +1,5 @@
 export class GlobalConstants {
-  public static WEB_VERSION: string = '2.0.1';
+  public static WEB_VERSION: string = '2.0.2';
 
   //RAZAK
   public static YOUTUBE_URL: string =
