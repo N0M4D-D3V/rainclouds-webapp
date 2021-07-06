@@ -9,8 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev:ssr": "ng run rainclouds-webapp:serve-ssr",
-    "serve:ssr": "node dist/rainclouds-webapp/server/main.js",
-    "build:ssr": "ng build --prod && ng run rainclouds-webapp:server:production",
+    "serve:ssr": "ng build && node dist/rainclouds-webapp/server/main.js",
+    "build:ssr": "ng build --configuration production && ng run rainclouds-webapp:server:production",
     "prerender": "ng run rainclouds-webapp:prerender"
   },
   "private": true,
