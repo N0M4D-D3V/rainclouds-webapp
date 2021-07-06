@@ -43,7 +43,7 @@ export class GlobalConstants {
 
   //Victor Develops
   public static VICTOR_DEVELOPS_LINKEDIN: string =
-    'https://www.linkedin.com/in/víctor-develops/';
+    'https://www.linkedin.com/in/victor-develops/';
 }
 
 export class BannerImages {
