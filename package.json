@@ -1,6 +1,6 @@
 {
   "name": "rainclouds-webapp",
-  "version": "2.0.0",
+  "version": "2.0.3",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,8 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev:ssr": "ng run rainclouds-webapp:serve-ssr",
-    "serve:ssr": "node dist/rainclouds-webapp/server/main.js",
-    "build:ssr": "ng build --prod && ng run rainclouds-webapp:server:production",
+    "serve:ssr": "ng build && node dist/rainclouds-webapp/server/main.js",
+    "build:ssr": "ng build --configuration production && ng run rainclouds-webapp:server:production",
     "prerender": "ng run rainclouds-webapp:prerender"
   },
   "private": true,
@@ -36,6 +36,8 @@
     "firebase": "^8.4.1",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
+    "postcss": "^8.3.5",
+    "postcss-scss": "^4.0.0",
     "rxjs": "^6.6.7",
     "sweetalert2": "^10.16.3",
     "tslib": "^2.2.0",

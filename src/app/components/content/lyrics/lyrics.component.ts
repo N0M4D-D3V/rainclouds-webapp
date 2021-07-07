@@ -29,6 +29,7 @@ export class LyricsComponent implements OnInit, AfterViewInit {
     this.lyricService.getAllLyrics().subscribe((response) => {
       this.allLyrics = response;
       this.filteredLyrics = response;
+      console.log(response);
     });
   }
 

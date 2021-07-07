@@ -16,6 +16,12 @@ a.button {
   width: 33% !important;
 }
 
+.card-title {
+  color: #fff;
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
+
 table {
   width: 99%;
   border-collapse: separate !important;

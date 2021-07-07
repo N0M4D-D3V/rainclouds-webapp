@@ -1,5 +1,5 @@
 export class GlobalConstants {
-  public static WEB_VERSION: string = '2.0.2';
+  public static WEB_VERSION: string = '2.0.3';
 
   //RAZAK
   public static YOUTUBE_URL: string =
@@ -43,7 +43,7 @@ export class GlobalConstants {
 
   //Victor Develops
   public static VICTOR_DEVELOPS_LINKEDIN: string =
-    'https://www.linkedin.com/in/víctor-develops/';
+    'https://www.linkedin.com/in/victor-develops/';
 }
 
 export class BannerImages {
