@@ -22,7 +22,11 @@
 
   <div class="card-columns mt-5">
     <div *ngFor="let lyric of filteredLyrics">
-      <a href="{{ lyric.songLink }}" target="_blank">
+      <a
+        href="{{ lyric.songLink }}"
+        target="_blank"
+        [class.disabled]="lyric.songLink === ''"
+      >
         <div
           class="card border-warning mb-3 card-appears-effect"
           [ngClass]="{

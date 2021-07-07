@@ -36,6 +36,8 @@
     "firebase": "^8.4.1",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
+    "postcss": "^8.3.5",
+    "postcss-scss": "^4.0.0",
     "rxjs": "^6.6.7",
     "sweetalert2": "^10.16.3",
     "tslib": "^2.2.0",
