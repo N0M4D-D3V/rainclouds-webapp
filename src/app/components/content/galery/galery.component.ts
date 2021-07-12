@@ -22,7 +22,6 @@ export class GaleryComponent implements OnInit {
   ngOnInit() {
     this.service
       .getAllImages()
-      .pipe(startWith(null), delay(0))
       .subscribe((response) => (this.imagesData = shuffle(response? response: new Array<Image>())));
   }
 }
