@@ -1,18 +1,25 @@
 <app-banner [imageSrc]="bannerImg" [type]="type" [invert]="true"></app-banner>
 <div class="container" *ngIf="imagesData">
+  <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0"></h1>
 
-    <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0"></h1>
-  
-    <hr class="mt-2 mb-5">
-  
-    <div class="row text-center text-lg-left">
-  
-      <div class="col-lg-3 col-md-4 col-6" *ngFor="let image of imagesData">
-        <a target="_blank" rel="external nofollow" href="{{image.imageLink}}" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail card-hover-efect" src="{{image.imageURL}}" alt="razak black metal gallery {{image.alt}}">
-        </a>
-      </div>
-  
+  <hr class="mt-2 mb-5" />
+
+  <app-spinner></app-spinner>
+
+  <div class="row text-center text-lg-left">
+    <div class="col-lg-3 col-md-4 col-6" *ngFor="let image of imagesData">
+      <a
+        target="_blank"
+        rel="external nofollow"
+        href="{{ image.imageLink }}"
+        class="d-block mb-4 h-100"
+      >
+        <img
+          class="img-fluid img-thumbnail card-hover-efect"
+          src="{{ image.imageURL }}"
+          alt="razak black metal gallery {{ image.alt }}"
+        />
+      </a>
     </div>
-  
   </div>
+</div>

@@ -4,7 +4,14 @@
     class="card-img main-home-img"
     src="assets/images/razakblackmetal.gif"
     alt="razak black metal main page gif"
+    style="background-color: black; width: 100%"
+    (load)="isMainImgLoading = !isMainImgLoading"
   />
+  <div
+    *ngIf="isMainImgLoading"
+    class="card-img main-home-img"
+    style="background-color: black; width: 100%"
+  ></div>
   <div class="card-img-overlay">
     <h5 class="card-title main-home-title">
       It's not about Death. It's about suffering.

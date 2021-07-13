@@ -18,6 +18,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 
 import { NgbModule, NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 //ENVIROMENT
 import { environment } from '../environments/environment.prod';
@@ -42,8 +44,11 @@ import { HomeComponent } from './components/content/home/home.component';
 import { AboutComponent } from './components/content/about/about.component';
 import { LyricsComponent } from './components/content/lyrics/lyrics.component';
 import { BannerComponent } from './components/shared/banner/banner.component';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+
+//DIRECTIVES
+import { DirectivesModule } from './directives/directives.module';
+import { SharedComponentsModule } from './components/shared/components/shared-components.module';
+import { SpinnerModule } from './components/shared/components/spinner/spinner.module';
 
 @NgModule({
   declarations: [
@@ -78,6 +83,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     FormsModule,
     HttpClientModule,
+    DirectivesModule,
+    SharedComponentsModule,
   ],
   providers: [NgbCarouselConfig],
   bootstrap: [AppComponent],
