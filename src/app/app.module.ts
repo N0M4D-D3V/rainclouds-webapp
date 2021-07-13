@@ -47,6 +47,8 @@ import { BannerComponent } from './components/shared/banner/banner.component';
 
 //DIRECTIVES
 import { DirectivesModule } from './directives/directives.module';
+import { SharedComponentsModule } from './components/shared/components/shared-components.module';
+import { SpinnerModule } from './components/shared/components/spinner/spinner.module';
 
 @NgModule({
   declarations: [
@@ -82,6 +84,7 @@ import { DirectivesModule } from './directives/directives.module';
     FormsModule,
     HttpClientModule,
     DirectivesModule,
+    SharedComponentsModule,
   ],
   providers: [NgbCarouselConfig],
   bootstrap: [AppComponent],
