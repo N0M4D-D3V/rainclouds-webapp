@@ -15,8 +15,6 @@ export class GaleryComponent implements OnInit {
 
   public imagesData: Array<Image> = new Array<Image>();
 
-  public isLoading: boolean = true;
-
   constructor(private service: ImageService) {}
 
   ngOnInit() {
